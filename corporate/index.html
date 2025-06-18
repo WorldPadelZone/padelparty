@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Padel Team Building Cape Town | PadelParty</title>
+    <meta name="description" content="Transform your team with dynamic padel experiences. Corporate team building, leadership development, and client entertainment in Cape Town.">
+    <meta name="keywords" content="corporate team building cape town, padel corporate events, business team building, leadership development">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'padel-blue': '#1E88E5',
+                        'padel-orange': '#FF6B35',
+                        'padel-green': '#4CAF50',
+                        'padel-dark': '#2E2E2E',
+                        'corp-navy': '#1E3A8A',
+                        'corp-gold': '#D97706',
+                        'corp-emerald': '#059669',
+                        'corp-slate': '#475569',
+                        'success-green': '#10B981',
+                        'premium-purple': '#7C3AED'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'bounce-gentle': 'bounceGentle 2s infinite',
+                        'pulse-slow': 'pulseSlow 3s ease-in-out infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                        'rotate-slow': 'rotateSlow 20s linear infinite'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounceGentle {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @keyframes pulseSlow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes rotateSlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #1E3A8A 0%, #1E88E5 25%, #059669 75%, #D97706 100%);
+        }
+
+        .hero-pattern {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .carousel-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .carousel-image.active {
+            opacity: 0.25;
+        }
+
+        .hero-content-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-scroll {
+            transition: all 0.3s ease;
+        }
+
+        .nav-scroll.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .corporate-badge {
+            background: linear-gradient(45deg, #1E3A8A, #059669);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .business-emoji {
+            animation: rotate-slow 20s linear infinite;
+            animation-delay: var(--delay, 0s);
+        }
+
+        .package-gradient-foundation {
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+        }
+
+        .package-gradient-growth {
+            background: linear-gradient(135deg, #1E88E5 0%, #1E3A8A 100%);
+        }
+
+        .package-gradient-leadership {
+            background: linear-gradient(135deg, #D97706 0%, #B45309 100%);
+        }
+
+        .package-gradient-executive {
+            background: linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%);
+        }
+
+        .results-bg {
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+        }
+
+        .metric-card {
+            background: linear-gradient(45deg, #10B981, #059669);
+        }
+
+        .roi-highlight {
+            background: linear-gradient(45deg, #D97706, #B45309);
+        }
+    </style>
+</head>
+
+<body class="font-inter text-padel-dark">
+    <!-- Navigation -->
+    <nav class="nav-scroll fixed w-full top-0 z-50 bg-white/90 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="bg-gradient-to-r from-padel-blue to-padel-orange text-white font-poppins font-bold text-xl px-3 py-1 rounded-lg mr-4">
+                        PadelParty
+                    </div>
+                    <span class="text-corp-navy font-semibold">Corporate</span>
+                </div>
+
+                <div class="hidden md:block">
+                    <div class="flex items-center space-x-6">
+                        <a href="#home" class="text-padel-dark hover:text-corp-navy transition-colors font-medium">Home</a>
+                        <a href="#programs" class="text-padel-dark hover:text-corp-navy transition-colors font-medium">Programs</a>
+                        <a href="#benefits" class="text-padel-dark hover:text-corp-navy transition-colors font-medium">Benefits</a>
+                        <a href="#packages" class="text-padel-dark hover:text-corp-navy transition-colors font-medium">Packages</a>
+                        <a href="#results" class="text-padel-dark hover:text-corp-navy transition-colors font-medium">Results</a>
+                        <button class="bg-corp-navy hover:bg-blue-800 text-white px-6 py-2 rounded-full font-semibold transition-colors">
+                            Request Proposal
+                        </button>
+                    </div>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-padel-dark hover:text-corp-navy focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-padel-dark hover:text-corp-navy font-medium">Home</a>
+                <a href="#programs" class="block px-3 py-2 text-padel-dark hover:text-corp-navy font-medium">Programs</a>
+                <a href="#benefits" class="block px-3 py-2 text-padel-dark hover:text-corp-navy font-medium">Benefits</a>
+                <a href="#packages" class="block px-3 py-2 text-padel-dark hover:text-corp-navy font-medium">Packages</a>
+                <a href="#results" class="block px-3 py-2 text-padel-dark hover:text-corp-navy font-medium">Results</a>
+                <button class="w-full text-left bg-corp-navy text-white px-3 py-2 rounded font-semibold">
+                    Request Proposal
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg hero-pattern min-h-screen flex items-center pt-16">
+        <div class="carousel-container" id="hero-carousel">
+            <img src="https://raw.githubusercontent.com/WorldPadelZone/worldpadelzone/main/assets/images/10.jpg" alt="Corporate team building on padel court" class="carousel-image active">
+            <img src="https://raw.githubusercontent.com/WorldPadelZone/worldpadelzone/main/assets/images/11.jpg" alt="Business team celebrating victory" class="carousel-image">
+            <img src="https://raw.githubusercontent.com/WorldPadelZone/worldpadelzone/main/assets/images/12.jpg" alt="Executive leadership development" class="carousel-image">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 hero-content-wrapper">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white animate-fade-in">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <span class="business-emoji text-4xl" style="--delay: 0s">🚀</span>
+                        <span class="business-emoji text-4xl" style="--delay: 5s">💼</span>
+                        <span class="business-emoji text-4xl" style="--delay: 10s">🏆</span>
+                        <span class="business-emoji text-4xl" style="--delay: 15s">⚡</span>
+                    </div>
+                    
+                    <h1 class="font-poppins font-bold text-4xl md:text-6xl lg:text-7xl leading-tight mb-6">
+                        Transform Your
+                        <span class="text-yellow-300">Team</span>
+                        Through Padel
+                    </h1>
+                    
+                    <p class="text-xl md:text-2xl mb-8 text-blue-100 font-light">
+                        Revolutionary team building that delivers measurable results. Build stronger relationships, improve communication, and boost performance in Cape Town's most inspiring locations.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <button class="bg-corp-gold hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105">
+                            🎯 Get Custom Proposal
+                        </button>
+                        <button class="border-2 border-white text-white hover:bg-white hover:text-corp-navy px-8 py-4 rounded-full font-semibold text-lg transition-all">
+                            📊 View Success Stories
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                        <div class="corporate-badge text-white rounded-full px-4 py-2 text-center">
+                            <div class="font-bold text-lg">🤝</div>
+                            <div class="text-xs">Team Building</div>
+                        </div>
+                        <div class="corporate-badge text-white rounded-full px-4 py-2 text-center" style="animation-delay: 1s">
+                            <div class="font-bold text-lg">💡</div>
+                            <div class="text-xs">Leadership Dev</div>
+                        </div>
+                        <div class="corporate-badge text-white rounded-full px-4 py-2 text-center" style="animation-delay: 2s">
+                            <div class="font-bold text-lg">🎯</div>
+                            <div class="text-xs">Client Events</div>   
+                        </div>
+                        <div class="corporate-badge text-white rounded-full px-4 py-2 text-center" style="animation-delay: 3s">
+                            <div class="font-bold text-lg">📈</div>
+                            <div class="text-xs">Performance</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative animate-slide-up">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+                        <div class="bg-white rounded-2xl p-6 shadow-2xl">
+                            <div class="text-center mb-4">
+                                <span class="text-4xl">📋</span>
+                                <h3 class="font-poppins font-bold text-padel-dark text-xl">Free Team Assessment</h3>
+                                <p class="text-sm text-gray-600">Discover your team's potential with our custom analysis</p>
+                            </div>
+                            <form class="space-y-4">
+                                <div>
+                                    <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-corp-navy focus:border-transparent">
+                                        <option>Primary Goal</option>
+                                        <option>🤝 Improve team collaboration</option>
+                                        <option>💡 Develop leadership skills</option>
+                                        <option>🎯 Enhance communication</option>
+                                        <option>🏆 Boost morale & engagement</option>
+                                        <option>🌟 Client entertainment</option>
+                                    </select>
+                                </div>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <input type="text" placeholder="Company Name" class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-corp-navy focus:border-transparent">
+                                    <input type="text" placeholder="Your Role" class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-corp-navy focus:border-transparent">
+                                </div>
+                                <input type="email" placeholder="Business Email" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-corp-navy focus:border-transparent">
+                                <div class="grid grid-cols-2 gap-3">
+                                    <input type="tel" placeholder="Phone" class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-corp-navy focus:border-transparent">
+                                    <input type="number" placeholder="Team Size" class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-corp-navy focus:border-transparent">
+                                </div>
+                                <button type="submit" class="w-full bg-corp-navy hover:bg-blue-800 text-white font-semibold py-3 rounded-lg transition-colors">
+                                    📊 Get Free Assessment
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-poppins font-bold text-4xl md:text-5xl text-padel-dark mb-6">
+                    Proven Programs That Drive Results
+                </h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    Our research-backed approach combines sport psychology, team dynamics, and leadership development to create transformational experiences for your organization.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card-hover bg-white rounded-2xl p-6 shadow-lg border-2 border-success-green/20">
+                    <div class="text-center mb-4">
+                        <div class="package-gradient-foundation text-white rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-2xl">🤝</span>
+                        </div>
+                        <h3 class="font-poppins font-bold text-xl text-padel-dark">Foundation Building</h3>
+                        <p class="text-success-green font-semibold">Trust & Communication</p>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                        <li class="flex items-center"><span class="text-success-green mr-2">✓</span> Ice-breaking activities</li>
+                        <li class="flex items-center"><span class="text-success-green mr-2">✓</span> Communication workshops</li>
+                        <li class="flex items-center"><span class="text-success-green mr-2">✓</span> Trust building exercises</li>
+                        <li class="flex items-center"><span class="text-success-green mr-2">✓</span> Team bonding matches</li>
+                        <li class="flex items-center"><span class="text-success-green mr-2">✓</span> Conflict resolution</li>
+                    </ul>
+                    <div class="text-padel-dark font-bold text-lg mb-4">From R15,000</div>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl p-6 shadow-lg border-2 border-padel-blue/20">
+                    <div class="text-center mb-4">
+                        <div class="package-gradient-growth text-white rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-2xl">📈</span>
+                        </div>
+                        <h3 class="font-poppins font-bold text-xl text-padel-dark">Performance Growth</h3>
+                        <p class="text-padel-blue font-semibold">Skills & Strategy</p>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                        <li class="flex items-center"><span class="text-padel-blue mr-2">✓</span> Goal setting workshops</li>
+                        <li class="flex items-center"><span class="text-padel-blue mr-2">✓</span> Performance analytics</li>
+                        <li class="flex items-center"><span class="text-padel-blue mr-2">✓</span> Strategic thinking games</li>
+                        <li class="flex items-center"><span class="text-padel-blue mr-2">✓</span> Problem-solving challenges</li>
+                        <li class="flex items-center"><span class="text-padel-blue mr-2">✓</span> Feedback systems</li>
+                    </ul>
+                    <div class="text-padel-dark font-bold text-lg mb-4">From R25,000</div>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl p-6 shadow-lg border-2 border-corp-gold/20">
+                    <div class="text-center mb-4">
+                        <div class="package-gradient-leadership text-white rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-2xl">👑</span>
+                        </div>
+                        <h3 class="font-poppins font-bold text-xl text-padel-dark">Leadership Excellence</h3>
+                        <p class="text-corp-gold font-semibold">Management Development</p>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                        <li class="flex items-center"><span class="text-corp-gold mr-2">✓</span> Leadership assessments</li>
+                        <li class="flex items-center"><span class="text-corp-gold mr-2">✓</span> Decision-making scenarios</li>
+                        <li class="flex items-center"><span class="text-corp-gold mr-2">✓</span> Coaching techniques</li>
+                        <li class="flex items-center"><span class="text-corp-gold mr-2">✓</span> Influence & motivation</li>
+                        <li class="flex items-center"><span class="text-corp-gold mr-2">✓</span> Vision alignment</li>
+                    </ul>
+                    <div class="text-padel-dark font-bold text-lg mb-4">From R45,000</div>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl p-6 shadow-lg border-2 border-premium-purple/20">
+                    <div class="text-center mb-4">
+                        <div class="package-gradient-executive text-white rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-2xl">💎</span>
+                        </div>
+                        <h3 class="font-poppins font-bold text-xl text-padel-dark">Executive Retreats</h3>
+                        <p class="text-premium-purple font-semibold">C-Suite Experiences</p>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                        <li class="flex items-center"><span class="text-premium-purple mr-2">✓</span> Strategic planning sessions</li>
+                        <li class="flex items-center"><span class="text-premium-purple mr-2">✓</span> Executive coaching</li>
+                        <li class="flex items-center"><span class="text-premium-purple mr-2">✓</span> Board alignment</li>
+                        <li class="flex items-center"><span class="text-premium-purple mr-2">✓</span> Vision workshops</li>
+                        <li class="flex items-center"><span class="text-premium-purple mr-2">✓</span> Succession planning</li>
+                    </ul>
+                    <div class="text-padel-dark font-bold text-lg mb-4">From R85,000</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-poppins font-bold text-4xl md:text-5xl text-padel-dark mb-6">
+                        Why Padel Transforms Teams
+                    </h2>
+                    <p class="text-xl text-gray-700 mb-8">
+                        Unlike traditional team building, padel creates a unique environment where natural leadership emerges, communication improves organically, and relationships deepen through shared challenges.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-success-green text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                                <span class="text-2xl">🧠</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg text-padel-dark mb-2">Psychological Safety</h4>
+                                <p class="text-gray-700">Padel's collaborative nature naturally creates psychological safety, encouraging team members to take risks and communicate openly.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-padel-blue text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                                <span class="text-2xl">⚡</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg text-padel-dark mb-2">Real-Time Problem Solving</h4>
+                                <p class="text-gray-700">Teams must adapt strategies instantly, developing agility and decision-making skills that transfer directly to business scenarios.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-corp-gold text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                                <span class="text-2xl">🎯</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg text-padel-dark mb-2">Natural Leadership Emergence</h4>
+                                <p class="text-gray-700">Leadership roles emerge organically during play, revealing hidden talents and developing confidence in new leaders.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-premium-purple text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                                <span class="text-2xl">🤝</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg text-padel-dark mb-2">Accelerated Trust Building</h4>
+                                <p class="text-gray-700">Shared vulnerability and mutual dependence in doubles play builds trust faster than traditional exercises.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-corp-navy to-success-green rounded-3xl p-8 text-white">
+                        <h3 class="font-poppins font-bold text-2xl mb-6 text-center">Research-Backed Benefits</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="font-semibold">Team Cohesion</span>
+                                    <span class="text-yellow-300 font-bold">+47%</span>
+                                </div>
+                                <div class="w-full bg-white/20 rounded-full h-2">
+                                    <div class="bg-yellow-300 h-2 rounded-full" style="width: 47%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="font-semibold">Communication Quality</span>
+                                    <span class="text-yellow-300 font-bold">+62%</span>
+                                </div>
+                                <div class="w-full bg-white/20 rounded-full h-2">
+                                    <div class="bg-yellow-300 h-2 rounded-full" style="width: 62%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="font-semibold">Problem-Solving Speed</span>
+                                    <span class="text-yellow-300 font-bold">+38%</span>
+                                </div>
+                                <div class="w-full bg-white/20 rounded-full h-2">
+                                    <div class="bg-yellow-300 h-2 rounded-full" style="width: 38%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="font-semibold">Employee Engagement</span>
+                                    <span class="text-yellow-300 font-bold">+73%</span>
+                                </div>
+                                <div class="w-full bg-white/20 rounded-full h-2">
+                                    <div class="bg-yellow-300 h-2 rounded-full" style="width: 73%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 p-4 roi-highlight rounded-xl text-center">
+                            <div class="font-poppins font-bold text-2xl">4.2x</div>
+                            <div class="text-sm text-orange-100">ROI on Team Investment</div>
+                            <div class="text-xs text-orange-200 mt-1">Measured over 12 months</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="py-20 bg-gradient-to-br from-gray-50 to-indigo-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-poppins font-bold text-4xl md:text-5xl text-padel-dark mb-6">
+                    Investment Packages That Deliver
+                </h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    Choose the program that matches your team's needs and budget. All packages include professional facilitation, equipment, venues, and comprehensive reporting.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Catalyst Package -->
+                <div class="card-hover bg-gradient-to-br from-success-green/10 to-corp-emerald/10 rounded-2xl p-8 border-2 border-success-green/30">
+                    <div class="text-center mb-6">
+                        <div class="bg-success-green text-white rounded-full w-20 h-20 flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-3xl">🚀</span>
+                        </div>
+                        <h3 class="font-poppins font-bold text-2xl text-padel-dark">Team Catalyst</h3>
+                        <p class="text-success-green font-semibold">Half-Day Foundation</p>
+                    </div>
+                    
+                    <div class="text-center mb-6">
+                        <div class="text-3xl font-bold text-padel-dark">R15,000</div>
+                        <div class="text-gray-600">Up to 20 people • 4 hours</div>
+                    </div>
+
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><span class="text-success-green mr-3">✓</span> Team assessment</li>
+                        <li class="flex items-center"><span class="text-success-green mr-3">✓</span> Padel introduction</li>
+                        <li class="flex items-center"><span class="text-success-green mr-3">✓</span> Communication workshop</li>
+                        <li class="flex items-center"><span class="text-success-green mr-3">✓</span> Trust-building games</li>
+                        <li class="flex items-center"><span class="text-success-green mr-3">✓</span> Action planning session</li>
+                        <li class="flex items-center"><span class="text-success-green mr-3">✓</span> Progress report</li>
+                    </ul>
+
+                    <div class="bg-white rounded-lg p-4 mb-6">
+                        <div class="text-sm text-gray-600 mb-2">Perfect for:</div>
+                        <div class="text-xs text-gray-500">
+                            • New teams<br>
+                            • Department integration<br>
+                            • Communication challenges
+                        </div>
+                    </div>
+
+                    <button class="w-full bg-success-green hover:bg-green-600 text-white font-semibold py-3 rounded-lg transition-colors">
+                        Start Your Journey
+                    </button>
+                </div>
+
+                <!-- Accelerator Package -->
+                <div class="card-hover bg-gradient-to-br from-padel-blue/10 to-corp-navy/10 rounded-2xl p-8 border-2 border-padel-blue/30 relative">
+                    <div class="absolute top-4 right-4 bg-padel-blue text-white text-xs px-3 py-1 rounded-full">
+                        MOST POPULAR
+                    </div>
+                    
+                    <div class="text-center mb-6">
+                        <div class="bg-padel-blue text-white rounded-full w-20 h-20 flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-3xl">⚡</span>
+                        </div>
+                        <h3 class="font-poppins font-bold text-2xl text-padel-dark">Performance Accelerator</h3>
+                        <p class="text-padel-blue font-semibold">Full-Day Transformation</p>
+                    </div>
+                    
+                    <div class="text-center mb-6">
+                        <div class="text-3xl font-bold text-padel-dark">R35,000</div>
+                        <div class="text-gray-600">Up to 30 people • 8 hours</div>
+                    </div>
+
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><span class="text-padel-blue mr-3">✓</span> Comprehensive assessment</li>
+                        <li class="flex items-center"><span class="text-padel-blue mr-3">✓</span> Skills development</li>
+                        <li class="flex items-center"><span class="text-padel-blue mr-3">✓</span> Leadership challenges</li>
+                        <li class="flex items-center"><span class="text-padel-blue mr-3">✓</span> Strategy workshops</li>
+                        <li class="flex items-center"><span class="text-padel-blue mr-3">✓</span> Performance analytics</li>
+                        <li class="flex items-center"><span class="text-padel-blue mr-3">✓</span> 3-month follow-up</li>
+                    </ul>
+
+                    <div class="bg-white rounded-lg p-4 mb-6">
+                        <div class="text-sm text-gray-600 mb-2">Includes:</div>
+                        <div class="text-xs text-gray-500">
+                            • Catered lunch<br>
+                            • Individual reports<br>
+                            • Digital resources
+                        </div>
+                    </div>
+
+                    <button class="w-full bg-padel-blue hover:bg-blue-600 text-white font-semibold py-3 rounded-lg transition-colors">
+                        Transform Your Team
+                    </button>
+                </div>
+
+                <!-- Executive Package -->
+                <div class="card-hover bg-gradient-to-br from-premium-purple/10 to-corp-gold/10 rounded-2xl p-8 border-2 border-premium-purple/30">
+                    <div class="text-center mb-6">
+                        <div class="bg-premium-purple text-white rounded-full w-20 h-20 flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-3xl">👑</span>
+                        </div>
+                        <h3 class="font-poppins font-bold text-2xl text-padel-dark">Executive Mastery</h3>
+                        <p class="text-premium-purple font-semibold">Multi-Day Retreat</p>
+                    </div>
+                    
+                    <div class="text-center mb-6">
+                        <div class="text-3xl font-bold text-padel-dark">R125,000</div>
+                        <div class="text-gray-600">Up to 15 executives • 3 days</div>
+                    </div>
+
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><span class="text-premium-purple mr-3">✓</span> Executive coaching</li>
+                        <li class="flex items-center"><span class="text-premium-purple mr-3">✓</span> Strategic planning</li>
+                        <li class="flex items-center"><span class="text-premium-purple mr-3">✓</span> Leadership development</li>
+                        <li class="flex items-center"><span class="text-premium-purple mr-3">✓</span> Vision alignment</li>
+                        <li class="flex items-center"><span class="text-premium-purple mr-3">✓</span> Succession planning</li>
+                        <li class="flex items-center"><span class="text-premium-purple mr-3">✓</span> 12-month program</li>
+                    </ul>
+
+                    <div class="bg-white rounded-lg p-4 mb-6">
+                        <div class="text-sm text-gray-600 mb-2">Premium Experience:</div>
+                        <div class="text-xs text-gray-500">
+                            • Luxury accommodation<br>
+                            • Executive chef<br>
+                            • Personal development plans
+                        </div>
+                    </div>
+
+                    <button class="w-full bg-premium-purple hover:bg-purple-600 text-white font-semibold py-3 rounded-lg transition-colors">
+                        Elevate Leadership
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="py-20 results-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-poppins font-bold text-4xl md:text-5xl text-padel-dark mb-6">
+                    Proven Results From Leading Companies
+                </h2>
+                <p class="text-xl text-gray-700">
+                    See how Cape Town's top organizations have transformed their teams through our programs.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-corp-navy text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">
+                            T
+                        </div>
+                        <div class="ml-4">
+                            <div class="font-semibold">TechCorp Solutions</div>
+                            <div class="text-sm text-gray-500">IT Services • 45 employees</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "Our development team went from siloed to synchronized. Project delivery improved by 35% and our employee satisfaction scores hit an all-time high. Best investment we've made."
+                    </p>
+                    <div class="flex text-yellow-400 mb-2">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <div class="text-xs text-gray-500">Performance Accelerator • 6-month tracking</div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-success-green text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">
+                            M
+                        </div>
+                        <div class="ml-4">
+                            <div class="font-semibold">MedGroup Consulting</div>
+                            <div class="text-sm text-gray-500">Healthcare • 28 professionals</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "The leadership skills our managers developed were immediately applicable. We've seen a 40% reduction in internal conflicts and decision-making is much more collaborative."
+                    </p>
+                    <div class="flex text-yellow-400 mb-2">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <div class="text-xs text-gray-500">Leadership Excellence • Quarterly sessions</div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-corp-gold text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">
+                            F
+                        </div>
+                        <div class="ml-4">
+                            <div class="font-semibold">FinServ Partners</div>
+                            <div class="text-sm text-gray-500">Financial Services • 60 staff</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "After the executive retreat, our C-suite alignment was remarkable. We launched three major initiatives in record time and our board relationships have never been stronger."
+                    </p>
+                    <div class="flex text-yellow-400 mb-2">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <div class="text-xs text-gray-500">Executive Mastery • Strategic planning</div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 max-w-4xl mx-auto shadow-lg">
+                <h3 class="font-poppins font-bold text-2xl text-center text-padel-dark mb-8">Measurable Business Impact</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="metric-card text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold">94%</span>
+                        </div>
+                        <div class="text-gray-600 text-sm">Client Satisfaction</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="metric-card text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold">67%</span>
+                        </div>
+                        <div class="text-gray-600 text-sm">Performance Increase</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="metric-card text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold">2.1x</span>
+                        </div>
+                        <div class="text-gray-600 text-sm">ROI Achievement</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="metric-card text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold">89%</span>
+                        </div>
+                        <div class="text-gray-600 text-sm">Retention Rate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="gradient-bg py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="animate-bounce-gentle mb-6">
+                <span class="text-6xl">🚀</span>
+            </div>
+            <h2 class="font-poppins font-bold text-4xl md:text-5xl text-white mb-6">
+                Ready to Transform Your Team?
+            </h2>
+            <p class="text-xl text-blue-100 mb-8">
+                Join the leading Cape Town companies who've discovered the power of padel team building. Get your custom proposal and start your transformation journey today.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <button class="bg-corp-gold hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105">
+                    📊 Get Custom Proposal
+                </button>
+                <button class="border-2 border-white text-white hover:bg-white hover:text-corp-navy px-8 py-4 rounded-full font-semibold text-lg transition-all">
+                    📞 Schedule Consultation
+                </button>
+            </div>
+            
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto">
+                <div class="text-white mb-4">
+                    <div class="font-semibold">🎁 Limited Time Offer:</div>
+                    <div>Free team assessment with every program booking (R5,000 value)</div>
+                </div>
+                <div class="text-blue-100 text-sm">
+                    📅 Flexible scheduling • 📍 Premium Camps Bay venues • 📈 Guaranteed results
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-padel-dark text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-gradient-to-r from-padel-blue to-padel-orange text-white font-poppins font-bold text-xl px-3 py-1 rounded-lg mr-2">
+                            PadelParty
+                        </div>
+                        <span class="text-corp-navy font-semibold">Corporate</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Transforming Cape Town businesses through innovative padel-based team building and leadership development programs.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-corp-gold transition-colors">📘</a>
+                        <a href="#" class="text-gray-400 hover:text-corp-gold transition-colors">💼</a>
+                        <a href="#" class="text-gray-400 hover:text-corp-gold transition-colors">📊</a>
+                        <a href="#" class="text-gray-400 hover:text-corp-gold transition-colors">🎯</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Programs</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-corp-gold transition-colors">🤝 Foundation Building</a></li>
+                        <li><a href="#" class="hover:text-corp-gold transition-colors">📈 Performance Growth</a></li>
+                        <li><a href="#" class="hover:text-corp-gold transition-colors">👑 Leadership Excellence</a></li>
+                        <li><a href="#" class="hover:text-corp-gold transition-colors">💎 Executive Retreats</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Business Solutions</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>📍 Camps Bay & Sandton venues</li>
+                        <li>📞 021-TEAM-BUILD (8326)</li>
+                        <li>✉️ corporate@padelparty.co.za</li>
+                        <li>🕒 Mon-Fri: 8AM-6PM</li>
+                        <li>📅 Custom scheduling available</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Resource Center</h4>
+                    <p class="text-gray-300 mb-4">Download leadership resources, ROI calculators, and team assessment tools.</p>
+                    <div class="flex mb-4">
+                        <input type="email" placeholder="Business email" class="flex-1 px-4 py-2 rounded-l-lg text-gray-900">
+                        <button class="bg-corp-navy hover:bg-blue-800 px-4 py-2 rounded-r-lg transition-colors">
+                            Access
+                        </button>
+                    </div>
+                    <div class="text-xs text-gray-400">
+                        🔒 Professional use only • No spam • Unsubscribe anytime
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 PadelParty Corporate. All rights reserved. | Privacy Policy | Terms of Service</p>
+                <p class="text-xs mt-2">Professional development programs • Certified facilitators • Results guaranteed</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Navbar scroll effect
+        const navbar = document.querySelector('.nav-scroll');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');  
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Form submission handling
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('🎯 Thank you for your interest! Our corporate team will contact you within 4 hours to discuss your custom program and schedule a free consultation.');
+            });
+        });
+
+        // Button click tracking
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                if (!this.type === 'submit') {
+                    console.log('Corporate Button clicked:', this.textContent);
+                }
+            });
+        });
+
+        // Enhanced scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0) scale(1)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe cards for animation
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px) scale(0.95)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Hero carousel functionality
+        const carouselImages = document.querySelectorAll('#hero-carousel .carousel-image');
+        let currentImageIndex = 0;
+
+        function showNextImage() {
+            if (carouselImages.length > 0) {
+                carouselImages[currentImageIndex].classList.remove('active');
+                currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
+                carouselImages[currentImageIndex].classList.add('active');
+            }
+        }
+
+        // Initialize carousel
+        if (carouselImages.length > 0) {
+            carouselImages[0].classList.add('active');
+            setInterval(showNextImage, 6000); // Slower for professional audience
+        }
+
+        // Interactive progress bars animation
+        const progressBars = document.querySelectorAll('[style*="width:"]');
+        const progressObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const bar = entry.target;
+                    const width = bar.style.width;
+                    bar.style.width = '0%';
+                    setTimeout(() => {
+                        bar.style.transition = 'width 2s ease-out';
+                        bar.style.width = width;
+                    }, 200);
+                }
+            });
+        });
+
+        progressBars.forEach(bar => {
+            progressObserver.observe(bar);
+        });
+
+        // Corporate badge click interaction
+        document.querySelectorAll('.corporate-badge').forEach(badge => {
+            badge.addEventListener('click', function() {
+                document.querySelector('#programs').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+
+        // Package selection tracking
+        document.querySelectorAll('[class*="package-"] button').forEach(button => {
+            button.addEventListener('click', function() {
+                const packageName = this.closest('[class*="card-hover"]').querySelector('h3').textContent;
+                console.log('Corporate package interest:', packageName);
+            });
+        });
+
+        // Add visual feedback for form interactions
+        document.querySelectorAll('input, select').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'scale(1.02)';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'scale(1)';
+            });
+        });
+
+        // Business emoji rotation control
+        document.querySelectorAll('.business-emoji').forEach(emoji => {
+            emoji.addEventListener('mouseenter', function() {
+                this.style.animationPlayState = 'paused';
+            });
+            
+            emoji.addEventListener('mouseleave', function() {
+                this.style.animationPlayState = 'running';
+            });
+        });
+    </script>
+</body>
+</html>

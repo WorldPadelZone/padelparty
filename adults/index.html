@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adult Padel Social Events Cape Town | PadelParty</title>
+    <meta name="description" content="Meet amazing people through padel! Speed dating, social mixers, and networking events in Cape Town's most beautiful locations.">
+    <meta name="keywords" content="padel speed dating cape town, adult social events, padel networking, singles events cape town">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'padel-blue': '#1E88E5',
+                        'padel-orange': '#FF6B35',
+                        'padel-green': '#4CAF50',
+                        'padel-dark': '#2E2E2E',
+                        'social-purple': '#8B5CF6',
+                        'social-pink': '#EC4899',
+                        'social-teal': '#14B8A6',
+                        'social-amber': '#F59E0B',
+                        'dating-red': '#EF4444',
+                        'network-indigo': '#6366F1'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'bounce-gentle': 'bounceGentle 2s infinite',
+                        'pulse-slow': 'pulseSlow 3s ease-in-out infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                        'swing': 'swing 2s ease-in-out infinite'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounceGentle {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @keyframes pulseSlow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes swing {
+            0%, 100% { transform: rotate(-3deg); }
+            50% { transform: rotate(3deg); }
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 30%, #1E88E5 70%, #14B8A6 100%);
+        }
+
+        .hero-pattern {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .carousel-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .carousel-image.active {
+            opacity: 0.2;
+        }
+
+        .hero-content-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-scroll {
+            transition: all 0.3s ease;
+        }
+
+        .nav-scroll.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .event-badge {
+            background: linear-gradient(45deg, #8B5CF6, #EC4899);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .social-emoji {
+            animation: swing 3s ease-in-out infinite;
+            animation-delay: var(--delay, 0s);
+        }
+
+        .package-gradient-dating {
+            background: linear-gradient(135deg, #EF4444 0%, #EC4899 100%);
+        }
+
+        .package-gradient-social {
+            background: linear-gradient(135deg, #8B5CF6 0%, #6366F1 100%);
+        }
+
+        .package-gradient-network {
+            background: linear-gradient(135deg, #1E88E5 0%, #14B8A6 100%);
+        }
+
+        .package-gradient-premium {
+            background: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);
+        }
+
+        .testimonial-bg {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
+        }
+
+        .heart-float {
+            animation: float 2s ease-in-out infinite;
+        }
+
+        .success-badge {
+            background: linear-gradient(45deg, #4CAF50, #14B8A6);
+        }
+    </style>
+</head>
+
+<body class="font-inter text-padel-dark">
+    <!-- Navigation -->
+    <nav class="nav-scroll fixed w-full top-0 z-50 bg-white/90 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="bg-gradient-to-r from-padel-blue to-padel-orange text-white font-poppins font-bold text-xl px-3 py-1 rounded-lg mr-4">
+                        PadelParty
+                    </div>
+                    <span class="text-social-purple font-semibold">Social</span>
+                </div>
+
+                <div class="hidden md:block">
+                    <div class="flex items-center space-x-6">
+                        <a href="#home" class="text-padel-dark hover:text-social-purple transition-colors font-medium">Home</a>
+                        <a href="#events" class="text-padel-dark hover:text-social-purple transition-colors font-medium">Events</a>
+                        <a href="#dating" class="text-padel-dark hover:text-social-purple transition-colors font-medium">Speed Dating</a>
+                        <a href="#networking" class="text-padel-dark hover:text-social-purple transition-colors font-medium">Networking</a>
+                        <a href="#community" class="text-padel-dark hover:text-social-purple transition-colors font-medium">Community</a>
+                        <button class="bg-social-pink hover:bg-pink-600 text-white px-6 py-2 rounded-full font-semibold transition-colors">
+                            Join Next Event
+                        </button>
+                    </div>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-padel-dark hover:text-social-purple focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-padel-dark hover:text-social-purple font-medium">Home</a>
+                <a href="#events" class="block px-3 py-2 text-padel-dark hover:text-social-purple font-medium">Events</a>
+                <a href="#dating" class="block px-3 py-2 text-padel-dark hover:text-social-purple font-medium">Speed Dating</a>
+                <a href="#networking" class="block px-3 py-2 text-padel-dark hover:text-social-purple font-medium">Networking</a>
+                <a href="#community" class="block px-3 py-2 text-padel-dark hover:text-social-purple font-medium">Community</a>
+                <button class="w-full text-left bg-social-pink text-white px-3 py-2 rounded font-semibold">
+                    Join Next Event
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg hero-pattern min-h-screen flex items-center pt-16">
+        <div class="carousel-container" id="hero-carousel">
+            <img src="https://raw.githubusercontent.com/WorldPadelZone/worldpadelzone/main/assets/images/7.jpg" alt="Adults playing padel socially" class="carousel-image active">
+            <img src="https://raw.githubusercontent.com/WorldPadelZone/worldpadelzone/main/assets/images/8.jpg" alt="Social padel event atmosphere" class="carousel-image">
+            <img src="https://raw.githubusercontent.com/WorldPadelZone/worldpadelzone/main/assets/images/9.jpg" alt="Networking through padel" class="carousel-image">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 hero-content-wrapper">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white animate-fade-in">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <span class="social-emoji text-4xl" style="--delay: 0s">💕</span>
+                        <span class="social-emoji text-4xl" style="--delay: 0.3s">🏓</span>
+                        <span class="social-emoji text-4xl" style="--delay: 0.6s">🥂</span>
+                        <span class="social-emoji text-4xl" style="--delay: 0.9s">✨</span>
+                    </div>
+                    
+                    <h1 class="font-poppins font-bold text-4xl md:text-6xl lg:text-7xl leading-tight mb-6">
+                        Meet Amazing
+                        <span class="text-yellow-300">People</span>
+                        Through Padel!
+                    </h1>
+                    
+                    <p class="text-xl md:text-2xl mb-8 text-blue-100 font-light">
+                        Cape Town's most fun way to connect! Speed dating, social mixers, and networking events in stunning Camps Bay locations. Single? Coupled? New to the city? We've got you covered!
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <button class="bg-social-pink hover:bg-pink-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105">
+                            💘 Join Next Dating Event
+                        </button>
+                        <button class="border-2 border-white text-white hover:bg-white hover:text-social-purple px-8 py-4 rounded-full font-semibold text-lg transition-all">
+                            🌟 Browse All Events
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                        <div class="event-badge text-white rounded-full px-4 py-2 text-center">
+                            <div class="font-bold text-lg">💕</div>
+                            <div class="text-xs">Speed Dating</div>
+                        </div>
+                        <div class="event-badge text-white rounded-full px-4 py-2 text-center" style="animation-delay: 0.5s">
+                            <div class="font-bold text-lg">🎉</div>
+                            <div class="text-xs">Social Mixers</div>
+                        </div>
+                        <div class="event-badge text-white rounded-full px-4 py-2 text-center" style="animation-delay: 1s">
+                            <div class="font-bold text-lg">🤝</div>
+                            <div class="text-xs">Networking</div>   
+                        </div>
+                        <div class="event-badge text-white rounded-full px-4 py-2 text-center" style="animation-delay: 1.5s">
+                            <div class="font-bold text-lg">👥</div>
+                            <div class="text-xs">Social Leagues</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative animate-slide-up">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+                        <div class="bg-white rounded-2xl p-6 shadow-2xl">
+                            <div class="text-center mb-4">
+                                <span class="text-4xl">💫</span>
+                                <h3 class="font-poppins font-bold text-padel-dark text-xl">Find Your Tribe</h3>
+                                <p class="text-sm text-gray-600">Join Cape Town's friendliest padel community!</p>
+                            </div>
+                            <form class="space-y-4">
+                                <div>
+                                    <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-social-purple focus:border-transparent">
+                                        <option>What brings you here?</option>
+                                        <option>💕 Looking for romance</option>
+                                        <option>👥 Want to make friends</option>
+                                        <option>🤝 Professional networking</option>
+                                        <option>🏓 Just love padel!</option>
+                                    </select>
+                                </div>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <input type="text" placeholder="First Name" class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-social-purple focus:border-transparent">
+                                    <input type="number" placeholder="Age" class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-social-purple focus:border-transparent">
+                                </div>
+                                <input type="email" placeholder="Email Address" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-social-purple focus:border-transparent">
+                                <div>
+                                    <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-social-purple focus:border-transparent">
+                                        <option>Padel Experience Level</option>
+                                        <option>Complete beginner (never played)</option>
+                                        <option>Novice (played a few times)</option>
+                                        <option>Intermediate (play regularly)</option>
+                                        <option>Advanced (tournament level)</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="w-full bg-social-purple hover:bg-purple-600 text-white font-semibold py-3 rounded-lg transition-colors">
+                                    ✨ Join the Community
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Overview Section -->
+    <section id="events" class="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-poppins font-bold text-4xl md:text-5xl text-padel-dark mb-6">
+                    Your Social Calendar Just Got Better
+                </h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    From heart-racing speed dating to relaxed social mixers, we create the perfect atmosphere for meaningful connections in Cape Town's most beautiful padel venues.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card-hover bg-white rounded-2xl p-6 shadow-lg border-2 border-dating-red/20">
+                    <div class="text-center mb-4">
+                        <div class="package-gradient-dating text-white rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-2xl">💕</span>
+                        </div>
+                        <h3 class="font-poppins font-bold text-xl text-padel-dark">Speed Dating</h3>
+                        <p class="text-dating-red font-semibold">Padel Americano Style</p>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                        <li class="flex items-center"><span class="text-dating-red mr-2">💫</span> 7-minute mini matches</li>
+                        <li class="flex items-center"><span class="text-dating-red mr-2">💫</span> Rotate partners</li>
+                        <li class="flex items-center"><span class="text-dating-red mr-2">💫</span> Pre-event mixer</li>
+                        <li class="flex items-center"><span class="text-dating-red mr-2">💫</span> Match results</li>
+                        <li class="flex items-center"><span class="text-dating-red mr-2">💫</span> Age-group specific</li>
+                    </ul>
+                    <div class="text-padel-dark font-bold text-lg mb-4">R350 per person</div>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl p-6 shadow-lg border-2 border-social-purple/20">
+                    <div class="text-center mb-4">
+                        <div class="package-gradient-social text-white rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-2xl">🎉</span>
+                        </div>
+                        <h3 class="font-poppins font-bold text-xl text-padel-dark">Social Mixers</h3>
+                        <p class="text-social-purple font-semibold">Fun & Friendship</p>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                        <li class="flex items-center"><span class="text-social-purple mr-2">🌟</span> Mixed skill levels</li>
+                        <li class="flex items-center"><span class="text-social-purple mr-2">🌟</span> Team shuffling</li>
+                        <li class="flex items-center"><span class="text-social-purple mr-2">🌟</span> Welcome drinks</li>
+                        <li class="flex items-center"><span class="text-social-purple mr-2">🌟</span> Group activities</li>
+                        <li class="flex items-center"><span class="text-social-purple mr-2">🌟</span> WhatsApp group</li>
+                    </ul>
+                    <div class="text-padel-dark font-bold text-lg mb-4">R250 per person</div>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl p-6 shadow-lg border-2 border-network-indigo/20">
+                    <div class="text-center mb-4">
+                        <div class="package-gradient-network text-white rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-2xl">🤝</span>
+                        </div>
+                        <h3 class="font-poppins font-bold text-xl text-padel-dark">Professional Networking</h3>
+                        <p class="text-network-indigo font-semibold">Business Connections</p>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                        <li class="flex items-center"><span class="text-network-indigo mr-2">💼</span> Industry-focused</li>
+                        <li class="flex items-center"><span class="text-network-indigo mr-2">💼</span> Structured networking</li>
+                        <li class="flex items-center"><span class="text-network-indigo mr-2">💼</span> Business card mixer</li>
+                        <li class="flex items-center"><span class="text-network-indigo mr-2">💼</span> LinkedIn connections</li>
+                        <li class="flex items-center"><span class="text-network-indigo mr-2">💼</span> Follow-up events</li>
+                    </ul>
+                    <div class="text-padel-dark font-bold text-lg mb-4">R450 per person</div>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl p-6 shadow-lg border-2 border-social-amber/20">
+                    <div class="text-center mb-4">
+                        <div class="package-gradient-premium text-white rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-2xl">👑</span>
+                        </div>
+                        <h3 class="font-poppins font-bold text-xl text-padel-dark">VIP Social Leagues</h3>
+                        <p class="text-social-amber font-semibold">Monthly Membership</p>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                        <li class="flex items-center"><span class="text-social-amber mr-2">👑</span> Weekly events</li>
+                        <li class="flex items-center"><span class="text-social-amber mr-2">👑</span> Member-only perks</li>
+                        <li class="flex items-center"><span class="text-social-amber mr-2">👑</span> Priority booking</li>
+                        <li class="flex items-center"><span class="text-social-amber mr-2">👑</span> Seasonal tournaments</li>
+                        <li class="flex items-center"><span class="text-social-amber mr-2">👑</span> VIP social events</li>
+                    </ul>
+                    <div class="text-padel-dark font-bold text-lg mb-4">R499 per month</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speed Dating Section -->
+    <section id="dating" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-poppins font-bold text-4xl md:text-5xl text-padel-dark mb-6">
+                    Love at First Serve 💕
+                </h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    Our signature Padel Americano Speed Dating events are taking Cape Town by storm! Meet 8-12 potential matches in one fun-filled evening.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-dating-red text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                                <span class="text-2xl">💘</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg text-padel-dark mb-2">How It Works</h4>
+                                <p class="text-gray-700">Arrive for welcome drinks, then rotate through 7-minute mini-padel matches. Each "date" is a fun doubles game where conversation flows naturally!</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-social-pink text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                                <span class="text-2xl">⚡</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg text-padel-dark mb-2">No Pressure Zone</h4>
+                                <p class="text-gray-700">The focus is on having fun and playing padel! This takes the awkwardness out of traditional speed dating and creates genuine connections.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-social-purple text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                                <span class="text-2xl">🎯</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg text-padel-dark mb-2">Smart Matching</h4>
+                                <p class="text-gray-700">After the event, we'll send you contact details for mutual matches. Plus, everyone gets invited to our WhatsApp community!</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-social-teal text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                                <span class="text-2xl">🌟</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg text-padel-dark mb-2">Age-Specific Events</h4>
+                                <p class="text-gray-700">We host separate events for different age groups (25-35, 35-45, 45+) to ensure compatibility and comfort for everyone.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-dating-red to-social-pink rounded-3xl p-8 text-white">
+                        <h3 class="font-poppins font-bold text-2xl mb-6 text-center">Success Stories</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+                                <div class="flex items-center space-x-3 mb-2">
+                                    <div class="heart-float text-2xl">💕</div>
+                                    <div>
+                                        <div class="font-semibold">Sarah & James</div>
+                                        <div class="text-sm text-pink-100">Matched at February event</div>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-pink-100">"We had such a laugh during our mini-match that we forgot to keep score! Now we play padel together every weekend."</p>
+                            </div>
+                            
+                            <div class="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+                                <div class="flex items-center space-x-3 mb-2">
+                                    <div class="heart-float text-2xl" style="animation-delay: 0.5s">💑</div>
+                                    <div>
+                                        <div class="font-semibold">Mike & Lisa</div>
+                                        <div class="text-sm text-pink-100">Now engaged!</div>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-pink-100">"Who knew terrible padel serves could lead to love? We're planning our wedding reception at the same court where we met!"</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 p-4 success-badge rounded-xl text-center">
+                            <div class="font-poppins font-bold text-2xl">78%</div>
+                            <div class="text-sm text-green-100">Match Rate</div>
+                            <div class="text-xs text-green-200 mt-1">85% attend follow-up events</div>
+                        </div>
+
+                        <div class="mt-6 text-center">
+                            <div class="text-sm text-pink-100 mb-2">Next Speed Dating Events:</div>
+                            <div class="font-bold">Every Friday 7-9PM</div>
+                            <div class="text-sm text-pink-200">Ages 25-35 • 35-45 • 45+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Networking Section -->
+    <section id="networking" class="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-poppins font-bold text-4xl md:text-5xl text-padel-dark mb-6">
+                    Business Networking Reimagined 🤝
+                </h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    Ditch the stuffy boardroom! Build meaningful professional relationships through shared experiences on the padel court.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-blue-200">
+                    <div class="bg-network-indigo/10 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <span class="text-3xl">🚀</span>
+                    </div>
+                    <h3 class="font-poppins font-bold text-2xl text-padel-dark mb-4">Startup Founders</h3>
+                    <p class="text-gray-600 mb-6">
+                        Connect with fellow entrepreneurs, share challenges, and build partnerships in a relaxed, fun environment.
+                    </p>
+                    <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                        <li class="flex items-center"><span class="text-network-indigo mr-2">✓</span> Pitch practice sessions</li>
+                        <li class="flex items-center"><span class="text-network-indigo mr-2">✓</span> Investor meetups</li>
+                        <li class="flex items-center"><span class="text-network-indigo mr-2">✓</span> Mentorship matching</li>
+                    </ul>
+                    <div class="text-padel-dark font-bold text-lg mb-4">R450/event</div>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-blue-200">
+                    <div class="bg-padel-blue/10 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <span class="text-3xl">💼</span>
+                    </div>
+                    <h3 class="font-poppins font-bold text-2xl text-padel-dark mb-4">Corporate Professionals</h3>
+                    <p class="text-gray-600 mb-6">
+                        Build your professional network beyond your industry. Great for career pivots and cross-industry collaboration.
+                    </p>
+                    <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                        <li class="flex items-center"><span class="text-padel-blue mr-2">✓</span> Industry mixer events</li>
+                        <li class="flex items-center"><span class="text-padel-blue mr-2">✓</span> Leadership workshops</li>
+                        <li class="flex items-center"><span class="text-padel-blue mr-2">✓</span> Executive tournaments</li>
+                    </ul>
+                    <div class="text-padel-dark font-bold text-lg mb-4">R350/event</div>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-blue-200">
+                    <div class="bg-social-teal/10 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <span class="text-3xl">🌱</span>
+                    </div>
+                    <h3 class="font-poppins font-bold text-2xl text-padel-dark mb-4">New to Cape Town</h3>
+                    <p class="text-gray-600 mb-6">
+                        Just moved to the Mother City? Connect with other newcomers and established locals for both personal and professional growth.
+                    </p>
+                    <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                        <li class="flex items-center"><span class="text-social-teal mr-2">✓</span> Welcome events</li>
+                        <li class="flex items-center"><span class="text-social-teal mr-2">✓</span> City exploration groups</li>
+                        <li class="flex items-center"><span class="text-social-teal mr-2">✓</span> Professional introduction</li>
+                    </ul>
+                    <div class="text-padel-dark font-bold text-lg mb-4">R250/event</div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl p-8 shadow-lg">
+                <h3 class="font-poppins font-bold text-2xl text-center text-padel-dark mb-8">Why Padel Networking Works</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="bg-network-indigo text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">🧠</span>
+                        </div>
+                        <h4 class="font-semibold text-lg mb-2">Breaks Down Barriers</h4>
+                        <p class="text-sm text-gray-600">Physical activity naturally reduces social anxiety and creates authentic connections.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-social-teal text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">⚡</span>
+                        </div>
+                        <h4 class="font-semibold text-lg mb-2">Memorable Encounters</h4>
+                        <p class="text-sm text-gray-600">Shared experiences create stronger memories than traditional business card exchanges.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-padel-blue text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">🎯</span>
+                        </div>
+                        <h4 class="font-semibold text-lg mb-2">Natural Conversation</h4>
+                        <p class="text-sm text-gray-600">Game play provides easy talking points and reveals personality authentically.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-social-purple text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">🤝</span>
+                        </div>
+                        <h4 class="font-semibold text-lg mb-2">Follow-Up Built In</h4>
+                        <p class="text-sm text-gray-600">Exchange contacts for future games, creating natural opportunities for continued connection.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="py-20 testimonial-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-poppins font-bold text-4xl md:text-5xl text-padel-dark mb-6">
+                    Join Cape Town's Friendliest Community
+                </h2>
+                <p class="text-xl text-gray-700">
+                    Real stories from real people who found friendship, love, and professional success through PadelParty Social.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-social-pink text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">
+                            A
+                        </div>
+                        <div class="ml-4">
+                            <div class="font-semibold">Amanda K.</div>
+                            <div class="text-sm text-gray-500">Marketing Manager, 28</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "I was new to Cape Town and knew nobody. Three months later, I have a solid friend group and even met my boyfriend at a speed dating event! The community is so welcoming."
+                    </p>
+                    <div class="flex text-yellow-400 mb-2">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <div class="text-xs text-gray-500">Regular Member • Social Mixers</div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-network-indigo text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">
+                            R
+                        </div>
+                        <div class="ml-4">
+                            <div class="font-semibold">Rob M.</div>
+                            <div class="text-sm text-gray-500">Startup Founder, 34</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "I've closed two business deals directly from connections made at networking events. Plus, I'm in the best shape of my life from playing padel twice a week!"
+                    </p>
+                    <div class="flex text-yellow-400 mb-2">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <div class="text-xs text-gray-500">VIP Member • Business Networking</div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-social-teal text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">
+                            L
+                        </div>
+                        <div class="ml-4">
+                            <div class="font-semibold">Lindiwe S.</div>
+                            <div class="text-sm text-gray-500">HR Director, 41</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "After my divorce, I thought I'd never meet anyone. The 35-45 speed dating events gave me confidence back. I may not have found 'the one' yet, but I found myself again!"
+                    </p>
+                    <div class="flex text-yellow-400 mb-2">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <div class="text-xs text-gray-500">Regular Attendee • Speed Dating</div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 max-w-4xl mx-auto shadow-lg">
+                <h3 class="font-poppins font-bold text-2xl text-center text-padel-dark mb-8">Community Impact</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="font-poppins font-bold text-3xl text-social-pink">2,500+</div>
+                        <div class="text-gray-600 text-sm">Active Members</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-poppins font-bold text-3xl text-network-indigo">150+</div>
+                        <div class="text-gray-600 text-sm">Successful Matches</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-poppins font-bold text-3xl text-social-teal">89%</div>
+                        <div class="text-gray-600 text-sm">Return Rate</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-poppins font-bold text-3xl text-social-purple">50+</div>
+                        <div class="text-gray-600 text-sm">Events Monthly</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="gradient-bg py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="animate-bounce-gentle mb-6">
+                <span class="text-6xl">✨</span>
+            </div>
+            <h2 class="font-poppins font-bold text-4xl md:text-5xl text-white mb-6">
+                Your Social Life Starts Here
+            </h2>
+            <p class="text-xl text-blue-100 mb-8">
+                Join Cape Town's most active social community. Whether you're looking for love, friendship, or professional connections, we've got the perfect event for you.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <button class="bg-social-pink hover:bg-pink-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105">
+                    💕 Book Speed Dating
+                </button>
+                <button class="border-2 border-white text-white hover:bg-white hover:text-social-purple px-8 py-4 rounded-full font-semibold text-lg transition-all">
+                    🎉 Browse All Events
+                </button>
+            </div>
+            
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto">
+                <div class="text-white mb-4">
+                    <div class="font-semibold">🎁 New Member Special:</div>
+                    <div>First event only R150 (usually R250-450)</div>
+                </div>
+                <div class="text-blue-100 text-sm">
+                    📅 Events daily • 📍 Camps Bay, Sea Point & Claremont • 🏓 All skill levels welcome
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-padel-dark text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-gradient-to-r from-padel-blue to-padel-orange text-white font-poppins font-bold text-xl px-3 py-1 rounded-lg mr-2">
+                            PadelParty
+                        </div>
+                        <span class="text-social-purple font-semibold">Social</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Cape Town's premier social padel community. Where connections happen naturally, friendships flourish, and love finds a way.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-social-pink transition-colors">📘</a>
+                        <a href="#" class="text-gray-400 hover:text-social-pink transition-colors">📷</a>
+                        <a href="#" class="text-gray-400 hover:text-social-pink transition-colors">💬</a>
+                        <a href="#" class="text-gray-400 hover:text-social-pink transition-colors">💕</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Event Types</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-social-pink transition-colors">💕 Speed Dating</a></li>
+                        <li><a href="#" class="hover:text-social-pink transition-colors">🎉 Social Mixers</a></li>
+                        <li><a href="#" class="hover:text-social-pink transition-colors">🤝 Networking Events</a></li>
+                        <li><a href="#" class="hover:text-social-pink transition-colors">👑 VIP Memberships</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Connect With Us</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>📍 Camps Bay, Sea Point, Claremont</li>
+                        <li>📞 021-LOVE-PADEL (5683)</li>
+                        <li>✉️ social@padelparty.co.za</li>
+                        <li>💬 WhatsApp Community</li>
+                        <li>📅 Events daily 6PM-9PM</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Stay Connected</h4>
+                    <p class="text-gray-300 mb-4">Get event invites, match updates, and community news.</p>
+                    <div class="flex mb-4">
+                        <input type="email" placeholder="Your email" class="flex-1 px-4 py-2 rounded-l-lg text-gray-900">
+                        <button class="bg-social-pink hover:bg-pink-600 px-4 py-2 rounded-r-lg transition-colors">
+                            Join
+                        </button>
+                    </div>
+                    <div class="text-xs text-gray-400">
+                        💕 Privacy protected • No spam • Community updates only
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 PadelParty Social. All rights reserved. | Community Guidelines | Privacy Policy</p>
+                <p class="text-xs mt-2">A safe, inclusive space for everyone • Professional event management • Verified profiles</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Navbar scroll effect
+        const navbar = document.querySelector('.nav-scroll');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');  
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Form submission handling
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('🎉 Welcome to the community! We\'ll send you our upcoming events calendar and WhatsApp group invite within 24 hours!');
+            });
+        });
+
+        // Button click tracking
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                if (!this.type === 'submit') {
+                    console.log('Social Event Button clicked:', this.textContent);
+                }
+            });
+        });
+
+        // Enhanced scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0) scale(1)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe cards for animation
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px) scale(0.95)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Hero carousel functionality
+        const carouselImages = document.querySelectorAll('#hero-carousel .carousel-image');
+        let currentImageIndex = 0;
+
+        function showNextImage() {
+            if (carouselImages.length > 0) {
+                carouselImages[currentImageIndex].classList.remove('active');
+                currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
+                carouselImages[currentImageIndex].classList.add('active');
+            }
+        }
+
+        // Initialize carousel
+        if (carouselImages.length > 0) {
+            carouselImages[0].classList.add('active');
+            setInterval(showNextImage, 5000);
+        }
+
+        // Interactive elements for social appeal
+        document.querySelectorAll('.social-emoji').forEach((emoji, index) => {
+            emoji.addEventListener('click', function() {
+                this.style.transform = 'scale(1.5) rotate(360deg)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1) rotate(0deg)';
+                }, 500);
+            });
+        });
+
+        // Event badge click interaction
+        document.querySelectorAll('.event-badge').forEach(badge => {
+            badge.addEventListener('click', function() {
+                // Scroll to events section when badge is clicked
+                document.querySelector('#events').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+
+        // Package selection tracking
+        document.querySelectorAll('[class*="package-"] + * button').forEach(button => {
+            button.addEventListener('click', function() {
+                console.log('Social package interest:', this.textContent);
+            });
+        });
+
+        // Add visual feedback for form interactions
+        document.querySelectorAll('input, select').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'scale(1.02)';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'scale(1)';
+            });
+        });
+
+        // Fun interactive features
+        let heartCount = 0;
+        document.querySelectorAll('.heart-float').forEach(heart => {
+            heart.addEventListener('click', function() {
+                heartCount++;
+                if (heartCount >= 3) {
+                    // Easter egg - show special message
+                    const messages = [
+                        "💕 Someone's feeling the love!",
+                        "💘 Ready to find your match?",
+                        "💑 Love is in the air at PadelParty!"
+                    ];
+                    alert(messages[Math.floor(Math.random() * messages.length)]);
+                    heartCount = 0;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
