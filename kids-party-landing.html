@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Padel Birthday Parties Cape Town | PadelParty</title>
+    <meta name="description" content="Unforgettable kids birthday parties in Cape Town. Age-appropriate padel experiences for ages 6-18 in beautiful Camps Bay locations.">
+    <meta name="keywords" content="kids birthday parties cape town, padel parties children, camps bay kids parties, active birthday parties">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'padel-blue': '#1E88E5',
+                        'padel-orange': '#FF6B35',
+                        'padel-green': '#4CAF50',
+                        'padel-dark': '#2E2E2E',
+                        'kids-pink': '#FF69B4',
+                        'kids-purple': '#9B59B6',
+                        'kids-yellow': '#FFD700'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'bounce-gentle': 'bounceGentle 2s infinite',
+                        'wiggle': 'wiggle 1s ease-in-out infinite',
+                        'float': 'float 3s ease-in-out infinite'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounceGentle {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @keyframes wiggle {
+            0%, 7% { transform: rotateZ(0); }
+            15% { transform: rotateZ(-15deg); }
+            20% { transform: rotateZ(10deg); }
+            25% { transform: rotateZ(-10deg); }
+            30% { transform: rotateZ(6deg); }
+            35% { transform: rotateZ(-4deg); }
+            40%, 100% { transform: rotateZ(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #FF69B4 0%, #1E88E5 50%, #FF6B35 100%);
+        }
+
+        .hero-pattern {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .carousel-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .carousel-image.active {
+            opacity: 0.15;
+        }
+
+        .hero-content-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-scroll {
+            transition: all 0.3s ease;
+        }
+
+        .nav-scroll.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .age-badge {
+            background: linear-gradient(45deg, #FF69B4, #9B59B6);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .fun-emoji {
+            animation: wiggle 2s ease-in-out infinite;
+            animation-delay: var(--delay, 0s);
+        }
+
+        .package-gradient-1 {
+            background: linear-gradient(135deg, #FFD700 0%, #FF6B35 100%);
+        }
+
+        .package-gradient-2 {
+            background: linear-gradient(135deg, #4CAF50 0%, #1E88E5 100%);
+        }
+
+        .package-gradient-3 {
+            background: linear-gradient(135deg, #9B59B6 0%, #FF69B4 100%);
+        }
+
+        .package-gradient-4 {
+            background: linear-gradient(135deg, #1E88E5 0%, #4CAF50 100%);
+        }
+
+        .testimonial-bg {
+            background: linear-gradient(135deg, rgba(255, 105, 180, 0.1) 0%, rgba(30, 136, 229, 0.1) 100%);
+        }
+    </style>
+</head>
+
+<body class="font-inter text-padel-dark">
+    <!-- Navigation -->
+    <nav class="nav-scroll fixed w-full top-0 z-50 bg-white/90 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="bg-gradient-to-r from-padel-blue to-padel-orange text-white font-poppins font-bold text-xl px-3 py-1 rounded-lg mr-4">
+                        PadelParty
+                    </div>
+                    <span class="text-kids-pink font-semibold">Kids</span>
+                </div>
+
+                <div class="hidden md:block">
+                    <div class="flex items-center space-x-6">
+                        <a href="#home" class="text-padel-dark hover:text-kids-pink transition-colors font-medium">Home</a>
+                        <a href="#packages" class="text-padel-dark hover:text-kids-pink transition-colors font-medium">Packages</a>
+                        <a href="#age-groups" class="text-padel-dark hover:text-kids-pink transition-colors font-medium">Age Groups</a>
+                        <a href="#safety" class="text-padel-dark hover:text-kids-pink transition-colors font-medium">Safety</a>
+                        <a href="#testimonials" class="text-padel-dark hover:text-kids-pink transition-colors font-medium">Reviews</a>
+                        <button class="bg-kids-pink hover:bg-pink-600 text-white px-6 py-2 rounded-full font-semibold transition-colors">
+                            Book Party
+                        </button>
+                    </div>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-padel-dark hover:text-kids-pink focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-padel-dark hover:text-kids-pink font-medium">Home</a>
+                <a href="#packages" class="block px-3 py-2 text-padel-dark hover:text-kids-pink font-medium">Packages</a>
+                <a href="#age-groups" class="block px-3 py-2 text-padel-dark hover:text-kids-pink font-medium">Age Groups</a>
+                <a href="#safety" class="block px-3 py-2 text-padel-dark hover:text-kids-pink font-medium">Safety</a>
+                <a href="#testimonials" class="block px-3 py-2 text-padel-dark hover:text-kids-pink font-medium">Reviews</a>
+                <button class="w-full text-left bg-kids-pink text-white px-3 py-2 rounded font-semibold">
+                    Book Party
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg hero-pattern min-h-screen flex items-center pt-16">
+        <div class="carousel-container" id="hero-carousel">
+            <img src="https://raw.githubusercontent.com/WorldPadelZone/worldpadelzone/main/assets/images/1.jpg" alt="Kids playing padel" class="carousel-image active">
+            <img src="https://raw.githubusercontent.com/WorldPadelZone/worldpadelzone/main/assets/images/2.jpg" alt="Birthday party celebration" class="carousel-image">
+            <img src="https://raw.githubusercontent.com/WorldPadelZone/worldpadelzone/main/assets/images/3.jpg" alt="Happy children with padel rackets" class="carousel-image">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 hero-content-wrapper">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white animate-fade-in">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <span class="fun-emoji text-4xl" style="--delay: 0s">🎉</span>
+                        <span class="fun-emoji text-4xl" style="--delay: 0.2s">🏓</span>
+                        <span class="fun-emoji text-4xl" style="--delay: 0.4s">🎂</span>
+                    </div>
+                    
+                    <h1 class="font-poppins font-bold text-4xl md:text-6xl lg:text-7xl leading-tight mb-6">
+                        The Best
+                        <span class="text-kids-yellow">Birthday Parties</span>
+                        in Cape Town!
+                    </h1>
+                    
+                    <p class="text-xl md:text-2xl mb-8 text-blue-100 font-light">
+                        Safe, fun, and unforgettable padel birthday experiences for kids aged 6-18. Professional coaches, all equipment included, and memories that last a lifetime!
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <button class="bg-kids-pink hover:bg-pink-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105">
+                            Plan Your Party
+                        </button>
+                        <button class="border-2 border-white text-white hover:bg-white hover:text-kids-pink px-8 py-4 rounded-full font-semibold text-lg transition-all">
+                            Call: 021-123-4567
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-4 gap-4 mt-8">
+                        <div class="age-badge text-white rounded-full px-4 py-2 text-center">
+                            <div class="font-bold text-lg">6-8</div>
+                            <div class="text-xs">Mini Champions</div>
+                        </div>
+                        <div class="age-badge text-white rounded-full px-4 py-2 text-center" style="animation-delay: 0.5s">
+                            <div class="font-bold text-lg">9-12</div>
+                            <div class="text-xs">Rising Stars</div>
+                        </div>
+                        <div class="age-badge text-white rounded-full px-4 py-2 text-center" style="animation-delay: 1s">
+                            <div class="font-bold text-lg">13-15</div>
+                            <div class="text-xs">Junior Athletes</div>
+                        </div>
+                        <div class="age-badge text-white rounded-full px-4 py-2 text-center" style="animation-delay: 1.5s">
+                            <div class="font-bold text-lg">16-18</div>
+                            <div class="text-xs">Teen Competitors</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative animate-slide-up">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+                        <div class="bg-white rounded-2xl p-6 shadow-2xl">
+                            <div class="text-center mb-4">
+                                <span class="text-4xl">🎈</span>
+                                <h3 class="font-poppins font-bold text-padel-dark text-xl">Get Your Free Quote</h3>
+                                <p class="text-sm text-gray-600">Personalized party planning just for your child!</p>
+                            </div>
+                            <form class="space-y-4">
+                                <div>
+                                    <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-kids-pink focus:border-transparent">
+                                        <option>Select Child's Age Group</option>
+                                        <option>Mini Champions (6-8 years)</option>
+                                        <option>Rising Stars (9-12 years)</option>
+                                        <option>Junior Athletes (13-15 years)</option>
+                                        <option>Teen Competitors (16-18 years)</option>
+                                    </select>
+                                </div>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <input type="text" placeholder="Parent Name" class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-kids-pink focus:border-transparent">
+                                    <input type="tel" placeholder="Phone" class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-kids-pink focus:border-transparent">
+                                </div>
+                                <input type="email" placeholder="Email Address" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-kids-pink focus:border-transparent">
+                                <div class="grid grid-cols-2 gap-3">
+                                    <input type="date" class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-kids-pink focus:border-transparent">
+                                    <input type="number" placeholder="# of Kids" class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-kids-pink focus:border-transparent">
+                                </div>
+                                <button type="submit" class="w-full bg-kids-pink hover:bg-pink-600 text-white font-semibold py-3 rounded-lg transition-colors">
+                                    🎉 Get Free Quote
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Age Groups Section -->
+    <section id="age-groups" class="py-20 bg-gradient-to-br from-blue-50 to-pink-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-poppins font-bold text-4xl md:text-5xl text-padel-dark mb-6">
+                    Perfect Parties for Every Age
+                </h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    Our expert party planners design age-appropriate experiences that match your child's development, interests, and skill level.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card-hover bg-white rounded-2xl p-6 shadow-lg border-2 border-kids-yellow/20">
+                    <div class="text-center mb-4">
+                        <div class="package-gradient-1 text-white rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-2xl">🌟</span>
+                        </div>
+                        <h3 class="font-poppins font-bold text-xl text-padel-dark">Mini Champions</h3>
+                        <p class="text-kids-pink font-semibold">Ages 6-8</p>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                        <li class="flex items-center"><span class="text-kids-yellow mr-2">⭐</span> 15-20 min activities</li>
+                        <li class="flex items-center"><span class="text-kids-yellow mr-2">⭐</span> Soft foam balls</li>
+                        <li class="flex items-center"><span class="text-kids-yellow mr-2">⭐</span> Treasure hunts</li>
+                        <li class="flex items-center"><span class="text-kids-yellow mr-2">⭐</span> Fun relay games</li>
+                        <li class="flex items-center"><span class="text-kids-yellow mr-2">⭐</span> Medals for everyone</li>
+                    </ul>
+                    <div class="text-padel-dark font-bold text-lg mb-4">From R2,200</div>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl p-6 shadow-lg border-2 border-padel-green/20">
+                    <div class="text-center mb-4">
+                        <div class="package-gradient-2 text-white rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-2xl">🚀</span>
+                        </div>
+                        <h3 class="font-poppins font-bold text-xl text-padel-dark">Rising Stars</h3>
+                        <p class="text-padel-green font-semibold">Ages 9-12</p>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                        <li class="flex items-center"><span class="text-padel-green mr-2">⭐</span> Skill development stations</li>
+                        <li class="flex items-center"><span class="text-padel-green mr-2">⭐</span> Mini tournaments</li>
+                        <li class="flex items-center"><span class="text-padel-green mr-2">⭐</span> Team challenges</li>
+                        <li class="flex items-center"><span class="text-padel-green mr-2">⭐</span> Trophy ceremonies</li>
+                        <li class="flex items-center"><span class="text-padel-green mr-2">⭐</span> Basic technique</li>
+                    </ul>
+                    <div class="text-padel-dark font-bold text-lg mb-4">From R3,800</div>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl p-6 shadow-lg border-2 border-kids-purple/20">
+                    <div class="text-center mb-4">
+                        <div class="package-gradient-3 text-white rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-2xl">🏆</span>
+                        </div>
+                        <h3 class="font-poppins font-bold text-xl text-padel-dark">Junior Athletes</h3>
+                        <p class="text-kids-purple font-semibold">Ages 13-15</p>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                        <li class="flex items-center"><span class="text-kids-purple mr-2">⭐</span> Competitive matches</li>
+                        <li class="flex items-center"><span class="text-kids-purple mr-2">⭐</span> Strategy workshops</li>
+                        <li class="flex items-center"><span class="text-kids-purple mr-2">⭐</span> Peer coaching</li>
+                        <li class="flex items-center"><span class="text-kids-purple mr-2">⭐</span> Performance metrics</li>
+                        <li class="flex items-center"><span class="text-kids-purple mr-2">⭐</span> Ranking certificates</li>
+                    </ul>
+                    <div class="text-padel-dark font-bold text-lg mb-4">From R4,500</div>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl p-6 shadow-lg border-2 border-padel-blue/20">
+                    <div class="text-center mb-4">
+                        <div class="package-gradient-4 text-white rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-2xl">👑</span>
+                        </div>
+                        <h3 class="font-poppins font-bold text-xl text-padel-dark">Teen Competitors</h3>
+                        <p class="text-padel-blue font-semibold">Ages 16-18</p>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                        <li class="flex items-center"><span class="text-padel-blue mr-2">⭐</span> Pro-level tournaments</li>
+                        <li class="flex items-center"><span class="text-padel-blue mr-2">⭐</span> Video analysis</li>
+                        <li class="flex items-center"><span class="text-padel-blue mr-2">⭐</span> Guest pro players</li>
+                        <li class="flex items-center"><span class="text-padel-blue mr-2">⭐</span> Scholarship info</li>
+                        <li class="flex items-center"><span class="text-padel-blue mr-2">⭐</span> Cash prizes</li>
+                    </ul>
+                    <div class="text-padel-dark font-bold text-lg mb-4">From R5,500</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-poppins font-bold text-4xl md:text-5xl text-padel-dark mb-6">
+                    Choose Your Perfect Party Package
+                </h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    Every package includes professional coaching, all equipment, safety supervision, and unforgettable fun!
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Starter Package -->
+                <div class="card-hover bg-gradient-to-br from-kids-yellow/10 to-padel-orange/10 rounded-2xl p-8 border-2 border-kids-yellow/30">
+                    <div class="text-center mb-6">
+                        <div class="bg-kids-yellow text-white rounded-full w-20 h-20 flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-3xl">🎈</span>
+                        </div>
+                        <h3 class="font-poppins font-bold text-2xl text-padel-dark">Starter Splash</h3>
+                        <p class="text-kids-yellow font-semibold">Perfect First Party</p>
+                    </div>
+                    
+                    <div class="text-center mb-6">
+                        <div class="text-3xl font-bold text-padel-dark">R2,200</div>
+                        <div class="text-gray-600">8-10 kids • 2 hours</div>
+                    </div>
+
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><span class="text-kids-yellow mr-3">✓</span> Padel treasure hunt</li>
+                        <li class="flex items-center"><span class="text-kids-yellow mr-3">✓</span> Mini-games with soft balls</li>
+                        <li class="flex items-center"><span class="text-kids-yellow mr-3">✓</span> Team relay races</li>
+                        <li class="flex items-center"><span class="text-kids-yellow mr-3">✓</span> Child-sized equipment</li>
+                        <li class="flex items-center"><span class="text-kids-yellow mr-3">✓</span> 2 coaches included</li>
+                        <li class="flex items-center"><span class="text-kids-yellow mr-3">✓</span> Participation medals</li>
+                    </ul>
+
+                    <div class="bg-white rounded-lg p-4 mb-6">
+                        <div class="text-sm text-gray-600 mb-2">Popular Add-ons:</div>
+                        <div class="text-xs text-gray-500">
+                            • Face painting (+R300)<br>
+                            • Themed decorations (+R200)<br>
+                            • Photo package (+R400)
+                        </div>
+                    </div>
+
+                    <button class="w-full bg-kids-yellow hover:bg-yellow-500 text-white font-semibold py-3 rounded-lg transition-colors">
+                        Choose This Package
+                    </button>
+                </div>
+
+                <!-- Premium Package -->
+                <div class="card-hover bg-gradient-to-br from-padel-green/10 to-padel-blue/10 rounded-2xl p-8 border-2 border-padel-green/30 relative">
+                    <div class="absolute top-4 right-4 bg-padel-green text-white text-xs px-3 py-1 rounded-full">
+                        MOST POPULAR
+                    </div>
+                    
+                    <div class="text-center mb-6">
+                        <div class="bg-padel-green text-white rounded-full w-20 h-20 flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-3xl">🏆</span>
+                        </div>
+                        <h3 class="font-poppins font-bold text-2xl text-padel-dark">Champion's Adventure</h3>
+                        <p class="text-padel-green font-semibold">The Complete Experience</p>
+                    </div>
+                    
+                    <div class="text-center mb-6">
+                        <div class="text-3xl font-bold text-padel-dark">R3,500</div>
+                        <div class="text-gray-600">12-15 kids • 2.5 hours</div>
+                    </div>
+
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><span class="text-padel-green mr-3">✓</span> Multi-skill stations</li>
+                        <li class="flex items-center"><span class="text-padel-green mr-3">✓</span> Mini tournament play</li>
+                        <li class="flex items-center"><span class="text-padel-green mr-3">✓</span> Victory ceremony</li>
+                        <li class="flex items-center"><span class="text-padel-green mr-3">✓</span> Personalized medals</li>
+                        <li class="flex items-center"><span class="text-padel-green mr-3">✓</span> 3 coaches + entertainer</li>
+                        <li class="flex items-center"><span class="text-padel-green mr-3">✓</span> Party bags & healthy snacks</li>
+                    </ul>
+
+                    <div class="bg-white rounded-lg p-4 mb-6">
+                        <div class="text-sm text-gray-600 mb-2">Includes:</div>
+                        <div class="text-xs text-gray-500">
+                            • Professional photography<br>
+                            • Themed decorations<br>
+                            • Digital photo album
+                        </div>
+                    </div>
+
+                    <button class="w-full bg-padel-green hover:bg-green-600 text-white font-semibold py-3 rounded-lg transition-colors">
+                        Choose This Package
+                    </button>
+                </div>
+
+                <!-- Elite Package -->
+                <div class="card-hover bg-gradient-to-br from-kids-purple/10 to-kids-pink/10 rounded-2xl p-8 border-2 border-kids-purple/30">
+                    <div class="text-center mb-6">
+                        <div class="bg-kids-purple text-white rounded-full w-20 h-20 flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-3xl">👑</span>
+                        </div>
+                        <h3 class="font-poppins font-bold text-2xl text-padel-dark">Elite Academy</h3>
+                        <p class="text-kids-purple font-semibold">Ultimate Celebration</p>
+                    </div>
+                    
+                    <div class="text-center mb-6">
+                        <div class="text-3xl font-bold text-padel-dark">R6,800</div>
+                        <div class="text-gray-600">16-24 kids • 4 hours</div>
+                    </div>
+
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><span class="text-kids-purple mr-3">✓</span> Professional training session</li>
+                        <li class="flex items-center"><span class="text-kids-purple mr-3">✓</span> Structured tournament</li>
+                        <li class="flex items-center"><span class="text-kids-purple mr-3">✓</span> Video analysis</li>
+                        <li class="flex items-center"><span class="text-kids-purple mr-3">✓</span> Fitness workshop</li>
+                        <li class="flex items-center"><span class="text-kids-purple mr-3">✓</span> Performance certificates</li>
+                        <li class="flex items-center"><span class="text-kids-purple mr-3">✓</span> Premium prizes & trophies</li>
+                    </ul>
+
+                    <div class="bg-white rounded-lg p-4 mb-6">
+                        <div class="text-sm text-gray-600 mb-2">VIP Experience:</div>
+                        <div class="text-xs text-gray-500">
+                            • Guest professional player<br>
+                            • Individual scorecards<br>
+                            • Equipment vouchers
+                        </div>
+                    </div>
+
+                    <button class="w-full bg-kids-purple hover:bg-purple-600 text-white font-semibold py-3 rounded-lg transition-colors">
+                        Choose This Package
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Section -->
+    <section id="safety" class="py-20 bg-gradient-to-br from-green-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-poppins font-bold text-4xl md:text-5xl text-padel-dark mb-6">
+                        Your Child's Safety is Our Priority
+                    </h2>
+                    <p class="text-xl text-gray-700 mb-8">
+                        As parents ourselves, we understand the importance of creating a safe, supervised environment where children can learn, play, and celebrate with confidence.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-padel-green text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                                <span class="text-2xl">🛡️</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg text-padel-dark mb-2">Qualified Supervision</h4>
+                                <p class="text-gray-700">All coaches are certified, background-checked, and trained in child safety protocols with first aid certification.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-kids-pink text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                                <span class="text-2xl">🏥</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg text-padel-dark mb-2">Medical Preparedness</h4>
+                                <p class="text-gray-700">First aid officer present at every event with emergency procedures clearly displayed and practiced.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-padel-blue text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                                <span class="text-2xl">⚽</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg text-padel-dark mb-2">Age-Appropriate Equipment</h4>
+                                <p class="text-gray-700">Specially sized rackets, soft balls for younger children, and proper safety gear for every age group.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-kids-yellow text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                                <span class="text-2xl">📋</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg text-padel-dark mb-2">Comprehensive Insurance</h4>
+                                <p class="text-gray-700">R5 million public liability coverage plus participant accident insurance for complete peace of mind.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-padel-green to-padel-blue rounded-3xl p-8 text-white">
+                        <h3 class="font-poppins font-bold text-2xl mb-6 text-center">Safety Ratios by Age</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-semibold">Ages 6-12</span>
+                                    <span class="text-kids-yellow font-bold">1:5 Ratio</span>
+                                </div>
+                                <div class="text-sm text-blue-100 mt-1">1 adult per 5 children</div>
+                            </div>
+                            
+                            <div class="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-semibold">Ages 13-18</span>
+                                    <span class="text-kids-yellow font-bold">1:8 Ratio</span>
+                                </div>
+                                <div class="text-sm text-blue-100 mt-1">1 adult per 8 teens</div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 p-4 bg-white/10 rounded-xl backdrop-blur-sm text-center">
+                            <div class="font-poppins font-bold text-2xl">100%</div>
+                            <div class="text-sm text-blue-100">Safety Record</div>
+                            <div class="text-xs text-blue-200 mt-1">Zero incidents in 500+ parties</div>
+                        </div>
+
+                        <div class="mt-6 text-center">
+                            <div class="text-sm text-blue-100 mb-2">Emergency Contact Always Available:</div>
+                            <div class="font-bold text-lg">082-PADEL-HELP</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 testimonial-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-poppins font-bold text-4xl md:text-5xl text-padel-dark mb-6">
+                    Happy Parents, Happy Kids!
+                </h2>
+                <p class="text-xl text-gray-700">
+                    Don't just take our word for it - hear from families who've celebrated with us.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-kids-pink text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">
+                            S
+                        </div>
+                        <div class="ml-4">
+                            <div class="font-semibold">Sarah M.</div>
+                            <div class="text-sm text-gray-500">Mom of Emma (8) & Josh (10)</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "Both my kids had their birthdays with PadelParty and they're STILL talking about it months later! The coaches were incredible with the children, so patient and fun. Worth every penny!"
+                    </p>
+                    <div class="flex text-yellow-400 mb-2">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <div class="text-xs text-gray-500">Champion's Adventure Package • Camps Bay</div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-padel-blue text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">
+                            T
+                        </div>
+                        <div class="ml-4">
+                            <div class="font-semibold">Thandi K.</div>
+                            <div class="text-sm text-gray-500">Mom of Aiden (14)</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "Getting teenagers excited about anything is hard, but PadelParty managed it! Aiden loved the competitive tournament format and even asked to join regular lessons. Brilliant experience!"
+                    </p>
+                    <div class="flex text-yellow-400 mb-2">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <div class="text-xs text-gray-500">Junior Athletes Package • Claremont</div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-padel-green text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">
+                            R
+                        </div>
+                        <div class="ml-4">
+                            <div class="font-semibold">Rachel D.</div>
+                            <div class="text-sm text-gray-500">Mom of twin 7-year-olds</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "Organizing a party for twins seemed impossible until I found PadelParty. They handled everything perfectly, kept 15 kids engaged for 2.5 hours, and I actually got to enjoy the party too!"
+                    </p>
+                    <div class="flex text-yellow-400 mb-2">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <div class="text-xs text-gray-500">Starter Splash Package • Sea Point</div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <div class="bg-white rounded-2xl p-8 max-w-4xl mx-auto shadow-lg">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <div class="text-center">
+                            <div class="font-poppins font-bold text-3xl text-kids-pink">500+</div>
+                            <div class="text-gray-600 text-sm">Birthday Parties</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-poppins font-bold text-3xl text-padel-blue">12,000+</div>
+                            <div class="text-gray-600 text-sm">Happy Kids</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-poppins font-bold text-3xl text-padel-green">98%</div>
+                            <div class="text-gray-600 text-sm">Rebook Rate</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-poppins font-bold text-3xl text-kids-yellow">5.0</div>
+                            <div class="text-gray-600 text-sm">Average Rating</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="gradient-bg py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="animate-bounce-gentle mb-6">
+                <span class="text-6xl">🎉</span>
+            </div>
+            <h2 class="font-poppins font-bold text-4xl md:text-5xl text-white mb-6">
+                Ready to Plan the Best Birthday Ever?
+            </h2>
+            <p class="text-xl text-blue-100 mb-8">
+                Give your child a birthday celebration they'll treasure forever. Book your personalized padel party experience today!
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <button class="bg-kids-pink hover:bg-pink-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105">
+                    🎂 Plan Your Party Now
+                </button>
+                <button class="border-2 border-white text-white hover:bg-white hover:text-kids-pink px-8 py-4 rounded-full font-semibold text-lg transition-all">
+                    📞 Call: 021-123-4567
+                </button>
+            </div>
+            
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto">
+                <div class="text-white mb-4">
+                    <div class="font-semibold">🎁 Limited Time Offer:</div>
+                    <div>Book by end of month and get FREE photo package (worth R400)</div>
+                </div>
+                <div class="text-blue-100 text-sm">
+                    📅 Weekend slots filling fast • 📍 Camps Bay & Claremont locations available
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-padel-dark text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-gradient-to-r from-padel-blue to-padel-orange text-white font-poppins font-bold text-xl px-3 py-1 rounded-lg mr-2">
+                            PadelParty
+                        </div>
+                        <span class="text-kids-pink font-semibold">Kids</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Cape Town's #1 kids birthday party specialists, creating magical padel experiences in Camps Bay's most beautiful locations.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-kids-pink transition-colors">📘</a>
+                        <a href="#" class="text-gray-400 hover:text-kids-pink transition-colors">📷</a>
+                        <a href="#" class="text-gray-400 hover:text-kids-pink transition-colors">💬</a>
+                        <a href="#" class="text-gray-400 hover:text-kids-pink transition-colors">🎵</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Age Groups</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-kids-pink transition-colors">Mini Champions (6-8)</a></li>
+                        <li><a href="#" class="hover:text-kids-pink transition-colors">Rising Stars (9-12)</a></li>
+                        <li><a href="#" class="hover:text-kids-pink transition-colors">Junior Athletes (13-15)</a></li>
+                        <li><a href="#" class="hover:text-kids-pink transition-colors">Teen Competitors (16-18)</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Party Planning</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>📍 Camps Bay & Claremont</li>
+                        <li>📞 021-123-PARTY (72789)</li>
+                        <li>✉️ kids@padelparty.co.za</li>
+                        <li>🕒 Daily: 8AM-6PM</li>
+                        <li>📅 Book 2-4 weeks ahead</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Parent Updates</h4>
+                    <p class="text-gray-300 mb-4">Get party planning tips, safety updates, and exclusive offers.</p>
+                    <div class="flex mb-4">
+                        <input type="email" placeholder="Your email" class="flex-1 px-4 py-2 rounded-l-lg text-gray-900">
+                        <button class="bg-kids-pink hover:bg-pink-600 px-4 py-2 rounded-r-lg transition-colors">
+                            Join
+                        </button>
+                    </div>
+                    <div class="text-xs text-gray-400">
+                        🔒 Privacy protected • No spam • Unsubscribe anytime
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 PadelParty Kids. All rights reserved. | Child Protection Policy | Terms of Service</p>
+                <p class="text-xs mt-2">Licensed childcare facility • Comprehensive insurance • Background-checked staff</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Navbar scroll effect
+        const navbar = document.querySelector('.nav-scroll');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');  
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Form submission handling
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Show success message with kids-friendly copy
+                alert('🎉 Yay! We received your party request! We\'ll call you within 2 hours to plan the most amazing birthday celebration for your child!');
+            });
+        });
+
+        // Button click tracking
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                if (!this.type === 'submit') {
+                    console.log('Kids Party Button clicked:', this.textContent);
+                }
+            });
+        });
+
+        // Enhanced scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0) scale(1)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe cards for animation
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px) scale(0.95)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Hero carousel functionality
+        const carouselImages = document.querySelectorAll('#hero-carousel .carousel-image');
+        let currentImageIndex = 0;
+
+        function showNextImage() {
+            if (carouselImages.length > 0) {
+                carouselImages[currentImageIndex].classList.remove('active');
+                currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
+                carouselImages[currentImageIndex].classList.add('active');
+            }
+        }
+
+        // Initialize carousel
+        if (carouselImages.length > 0) {
+            carouselImages[0].classList.add('active');
+            setInterval(showNextImage, 4000); // Slightly faster for kids attention
+        }
+
+        // Add some fun interactive elements for kids appeal
+        document.querySelectorAll('.fun-emoji').forEach((emoji, index) => {
+            emoji.addEventListener('click', function() {
+                this.style.transform = 'scale(1.5) rotate(360deg)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1) rotate(0deg)';
+                }, 500);
+            });
+        });
+
+        // Age badge click interaction
+        document.querySelectorAll('.age-badge').forEach(badge => {
+            badge.addEventListener('click', function() {
+                // Scroll to packages section when age badge is clicked
+                document.querySelector('#packages').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+
+        // Package selection tracking
+        document.querySelectorAll('[class*="package-"] button').forEach(button => {
+            button.addEventListener('click', function() {
+                const packageName = this.closest('[class*="card-hover"]').querySelector('h3').textContent;
+                console.log('Package selected:', packageName);
+                // Here you would typically trigger a conversion event
+            });
+        });
+
+        // Add visual feedback for form interactions
+        document.querySelectorAll('input, select').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'scale(1.02)';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
