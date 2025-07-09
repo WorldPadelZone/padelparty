@@ -13,8 +13,7 @@
     <!-- Open Graph Meta Tags (for social sharing) -->
     <meta property="og:title" content="Padel Party | Unforgettable Padel Events">
     <meta property="og:description" content="We plan, you play. All-inclusive padel events for corporate and social groups.">
-    <!-- NOTE: Update 'worldpadelzone.com' for this to work when sharing -->
-    <meta property="og:image" content="https://worldpadelzone.com/assets/images/1.jpg">
+    <meta property="og:image" content="https://worldpadelzone.com/assets/images/worldpadelzonehero.jpg">
     <meta property="og:url" content="https://worldpadelzone.com">
     <meta property="og:type" content="website">
 
@@ -35,8 +34,8 @@
             font-family: 'Inter', sans-serif;
             background-color: #f8fafc; /* slate-50 */
         }
-        .hero-video-overlay {
-            background-color: rgba(17, 24, 39, 0.6); /* gray-900 with 60% opacity */
+        .hero-overlay {
+            background-color: rgba(17, 24, 39, 0.5); /* gray-900 with 50% opacity */
         }
         .section-title {
             @apply text-3xl font-bold text-slate-800 sm:text-4xl;
@@ -56,8 +55,11 @@
             opacity: 1;
             transform: translateY(0);
         }
-        .dynamic-image {
+        .dynamic-image, .hero-carousel-image {
             transition: opacity 0.5s ease-in-out;
+        }
+        .hero-carousel-image {
+            @apply absolute top-0 left-0 w-full h-full object-cover;
         }
     </style>
 </head>
@@ -69,8 +71,7 @@
             <div class="flex justify-between items-center">
                 <!-- Logo -->
                 <a href="#" class="flex items-center space-x-2">
-                    <!-- Placeholder SVG Logo - Replace with your own logo -->
-                    <svg class="h-8 w-8 text-white" viewBox="0 0 24 24" fill="currentColor" xmlns="https://worldpadelzone.github.io/padelparty/assets/Logo.png">
+                    <svg class="h-8 w-8 text-white" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.715 11.232C19.235 10.282 18.065 9.172 16.735 8.282C15.405 7.392 14.125 6.792 12.895 6.482C12.825 6.472 12.745 6.462 12.675 6.452C12.505 6.412 12.255 6.382 11.915 6.382H11.725C10.745 6.382 9.81501 6.642 8.98501 7.162L14.305 12.482L15.715 11.072L19.715 11.232ZM8.41501 16.842C9.35501 17.352 10.465 17.622 11.725 17.622H11.915C12.255 17.622 12.505 17.592 12.675 17.552C12.745 17.542 12.825 17.532 12.895 17.522C14.125 17.212 15.405 16.612 16.735 15.722C18.065 14.832 19.235 13.722 19.715 12.772L15.715 12.932L8.41501 16.842ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z"/>
                     </svg>
                     <span class="text-2xl font-bold text-white">Padel Party</span>
@@ -99,14 +100,15 @@
 
     <!-- Hero Section -->
     <section class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
-        <!-- Video Background -->
-        <video autoplay loop muted playsinline class="absolute z-0 w-auto min-w-full min-h-full max-w-none">
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-two-men-playing-a-game-of-paddel-4322-large.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="hero-video-overlay absolute top-0 left-0 right-0 bottom-0"></div>
+        <!-- Image Carousel Background -->
+        <div id="hero-carousel" class="absolute top-0 left-0 w-full h-full z-0">
+            <img src="https://worldpadelzone.com/assets/images/worldpadelzonehero.jpg" alt="Vibrant padel party scene" class="hero-carousel-image" style="opacity: 1;">
+            <img src="https://worldpadelzone.com/assets/images/worldpadelzonehero01.jpg" alt="People enjoying a padel event" class="hero-carousel-image" style="opacity: 0;">
+            <img src="https://worldpadelzone.com/assets/images/worldpadelzonehero02.jpg" alt="Action shot from a padel match" class="hero-carousel-image" style="opacity: 0;">
+        </div>
+        <div class="hero-overlay absolute top-0 left-0 right-0 bottom-0 z-10"></div>
         
-        <div class="relative z-10 px-6">
+        <div class="relative z-20 px-6">
             <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4 fade-in">
                 The Ultimate Padel Experience for Your Team or Social Club
             </h1>
@@ -224,42 +226,42 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                     <!-- Occasion Card -->
                     <div class="relative rounded-xl overflow-hidden shadow-lg group fade-in">
-                        <img src="worldpadelzone/assets/images/1.jpg" alt="Corporate team building event" class="dynamic-image w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x400/f8fafc/94a3b8?text=Image+Not+Found';">
+                        <img src="https://worldpadelzone.com/assets/images/1.jpg" alt="Corporate team building event" class="dynamic-image w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x400/f8fafc/94a3b8?text=Image+Not+Found';">
                         <div class="absolute inset-0 bg-black/50 flex items-end p-6">
                             <h3 class="text-2xl font-bold text-white">Corporate Team Building</h3>
                         </div>
                     </div>
                     <!-- Occasion Card -->
                     <div class="relative rounded-xl overflow-hidden shadow-lg group fade-in" style="transition-delay: 150ms;">
-                        <img src="worldpadelzone/assets/images/2.jpg" alt="Client entertainment event" class="dynamic-image w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x400/f8fafc/94a3b8?text=Image+Not+Found';">
+                        <img src="https://worldpadelzone.com/assets/images/2.jpg" alt="Client entertainment event" class="dynamic-image w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x400/f8fafc/94a3b8?text=Image+Not+Found';">
                         <div class="absolute inset-0 bg-black/50 flex items-end p-6">
                             <h3 class="text-2xl font-bold text-white">Client Entertainment</h3>
                         </div>
                     </div>
                      <!-- Occasion Card -->
                     <div class="relative rounded-xl overflow-hidden shadow-lg group fade-in" style="transition-delay: 300ms;">
-                        <img src="worldpadelzone/assets/images/3.jpg" alt="Year-end function" class="dynamic-image w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x400/f8fafc/94a3b8?text=Image+Not+Found';">
+                        <img src="https://worldpadelzone.com/assets/images/3.jpg" alt="Year-end function" class="dynamic-image w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x400/f8fafc/94a3b8?text=Image+Not+Found';">
                         <div class="absolute inset-0 bg-black/50 flex items-end p-6">
                             <h3 class="text-2xl font-bold text-white">Year-End Functions</h3>
                         </div>
                     </div>
                      <!-- Occasion Card -->
                     <div class="relative rounded-xl overflow-hidden shadow-lg group fade-in" style="transition-delay: 450ms;">
-                        <img src="worldpadelzone/assets/images/4.jpg" alt="Social club outing" class="dynamic-image w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x400/f8fafc/94a3b8?text=Image+Not+Found';">
+                        <img src="https://worldpadelzone.com/assets/images/4.jpg" alt="Social club outing" class="dynamic-image w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x400/f8fafc/94a3b8?text=Image+Not+Found';">
                         <div class="absolute inset-0 bg-black/50 flex items-end p-6">
                             <h3 class="text-2xl font-bold text-white">Social Club Outings</h3>
                         </div>
                     </div>
                      <!-- Occasion Card -->
                     <div class="relative rounded-xl overflow-hidden shadow-lg group fade-in" style="transition-delay: 600ms;">
-                        <img src="worldpadelzone/assets/images/5.jpg" alt="Milestone birthday party" class="dynamic-image w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x400/f8fafc/94a3b8?text=Image+Not+Found';">
+                        <img src="https://worldpadelzone.com/assets/images/5.jpg" alt="Milestone birthday party" class="dynamic-image w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x400/f8fafc/94a3b8?text=Image+Not+Found';">
                         <div class="absolute inset-0 bg-black/50 flex items-end p-6">
                             <h3 class="text-2xl font-bold text-white">Milestone Birthdays</h3>
                         </div>
                     </div>
                      <!-- Occasion Card -->
                     <div class="relative rounded-xl overflow-hidden shadow-lg group fade-in" style="transition-delay: 750ms;">
-                        <img src="worldpadelzone/assets/images/6.jpg" alt="Special celebration" class="dynamic-image w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x400/f8fafc/94a3b8?text=Image+Not+Found';">
+                        <img src="https://worldpadelzone.com/assets/images/6.jpg" alt="Special celebration" class="dynamic-image w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x400/f8fafc/94a3b8?text=Image+Not+Found';">
                         <div class="absolute inset-0 bg-black/50 flex items-end p-6">
                             <h3 class="text-2xl font-bold text-white">Any Celebration!</h3>
                         </div>
@@ -275,17 +277,17 @@
                 <p class="section-subtitle fade-in">This is where the magic happens. High-fives, friendly competition, and a lot of laughs.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12">
                     <div class="fade-in">
-                        <img src="worldpadelzone/assets/images/7.jpg" alt="Group of people playing padel and laughing" class="dynamic-image rounded-lg shadow-md w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/800x600/f8fafc/94a3b8?text=Image+Not+Found';">
+                        <img src="https://worldpadelzone.com/assets/images/7.jpg" alt="Group of people playing padel and laughing" class="dynamic-image rounded-lg shadow-md w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/800x600/f8fafc/94a3b8?text=Image+Not+Found';">
                     </div>
                     <div class="grid grid-cols-2 gap-4">
                         <div class="fade-in" style="transition-delay: 200ms;">
-                             <img src="worldpadelzone/assets/images/8.jpg" alt="People socializing with drinks after a game" class="dynamic-image rounded-lg shadow-md w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/f8fafc/94a3b8?text=Image+Not+Found';">
+                             <img src="https://worldpadelzone.com/assets/images/8.jpg" alt="People socializing with drinks after a game" class="dynamic-image rounded-lg shadow-md w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/f8fafc/94a3b8?text=Image+Not+Found';">
                         </div>
                         <div class="fade-in" style="transition-delay: 300ms;">
-                             <img src="worldpadelzone/assets/images/9.jpg" alt="Coach explaining rules to a group of beginners" class="dynamic-image rounded-lg shadow-md w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/f8fafc/94a3b8?text=Image+Not+Found';">
+                             <img src="https://worldpadelzone.com/assets/images/9.jpg" alt="Coach explaining rules to a group of beginners" class="dynamic-image rounded-lg shadow-md w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/f8fafc/94a3b8?text=Image+Not+Found';">
                         </div>
                         <div class="col-span-2 fade-in" style="transition-delay: 400ms;">
-                             <img src="worldpadelzone/assets/images/10.jpg" alt="Happy group photo of all event attendees" class="dynamic-image rounded-lg shadow-md w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/800x300/f8fafc/94a3b8?text=Image+Not+Found';">
+                             <img src="https://worldpadelzone.com/assets/images/10.jpg" alt="Happy group photo of all event attendees" class="dynamic-image rounded-lg shadow-md w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/800x300/f8fafc/94a3b8?text=Image+Not+Found';">
                         </div>
                     </div>
                 </div>
@@ -417,48 +419,42 @@
             const contactForm = document.getElementById('contact-form');
             const successMessage = document.getElementById('form-success-message');
             contactForm.addEventListener('submit', function(e) {
-                e.preventDefault(); // Prevent actual form submission
-                
-                // Here you would typically send the form data to a server or email service.
-                // For this static example, we'll just show a success message.
-                
+                e.preventDefault();
                 const formElements = contactForm.querySelectorAll('div:not(:first-child)');
                 formElements.forEach(el => el.style.display = 'none');
                 successMessage.classList.remove('hidden');
-                
                 successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
             });
 
-            // --- Dynamic Image Refresh ---
-            const imageBasePath = 'worldpadelzone/assets/images/';
-            const totalImages = 60;
+            // --- Hero Image Carousel ---
+            const heroImages = document.querySelectorAll('.hero-carousel-image');
+            let currentHeroIndex = 0;
+            setInterval(() => {
+                heroImages[currentHeroIndex].style.opacity = '0';
+                currentHeroIndex = (currentHeroIndex + 1) % heroImages.length;
+                heroImages[currentHeroIndex].style.opacity = '1';
+            }, 5000); // Change image every 5 seconds
 
+            // --- Dynamic Image Refresh in Gallery/Occasions ---
+            const imageBasePath = 'https://worldpadelzone.com/assets/images/';
+            const totalImages = 60;
             function updateDynamicImages() {
                 const dynamicImages = document.querySelectorAll('.dynamic-image');
                 dynamicImages.forEach(img => {
-                    // Get a new random number
                     const randomImageNumber = Math.floor(Math.random() * totalImages) + 1;
                     const newSrc = `${imageBasePath}${randomImageNumber}.jpg`;
                     
-                    // To avoid a flash of a broken image, we can preload the new image
                     const tempImg = new Image();
                     tempImg.src = newSrc;
                     tempImg.onload = () => {
-                        // Fade out the old image, change src, then fade in
                         img.style.opacity = '0';
                         setTimeout(() => {
                            img.src = newSrc;
                            img.style.opacity = '1';
-                        }, 250); // half of the transition duration
-                    };
-                    tempImg.onerror = () => {
-                        // If the new image fails to load, do nothing and keep the old one.
-                        // This prevents showing a broken image icon during refresh.
+                        }, 250);
                     };
                 });
             }
-
-            // Set interval to refresh images every 3 seconds
             setInterval(updateDynamicImages, 3000);
         });
     </script>
