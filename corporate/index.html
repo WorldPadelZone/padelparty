@@ -1,1024 +1,475 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corporate Padel Team Building Cape Town | PadelParty</title>
-    <meta name="description" content="Transform your team with dynamic padel experiences. Corporate team building, leadership development, and client entertainment in Cape Town.">
-    <meta name="keywords" content="corporate team building cape town, padel corporate events, business team building, leadership development">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'padel-blue': '#1E88E5',
-                        'padel-orange': '#FF6B35',
-                        'padel-green': '#4CAF50',
-                        'padel-dark': '#2E2E2E',
-                        'corp-navy': '#1E3A8A',
-                        'corp-gold': '#D97706',
-                        'corp-emerald': '#059669',
-                        'corp-slate': '#475569',
-                        'success-green': '#10B981',
-                        'premium-purple': '#7C3AED'
-                    },
-                    fontFamily: {
-                        'poppins': ['Poppins', 'sans-serif'],
-                        'inter': ['Inter', 'sans-serif']
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 0.8s ease-in-out',
-                        'slide-up': 'slideUp 0.6s ease-out',
-                        'bounce-gentle': 'bounceGentle 2s infinite',
-                        'pulse-slow': 'pulseSlow 3s ease-in-out infinite',
-                        'float': 'float 3s ease-in-out infinite',
-                        'rotate-slow': 'rotateSlow 20s linear infinite'
-                    }
-                }
-            }
-        }
-    </script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <style>
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes bounceGentle {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-10px);
-            }
-            60% {
-                transform: translateY(-5px);
-            }
-        }
-
-        @keyframes pulseSlow {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
-        }
-
-        @keyframes rotateSlow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        .gradient-bg {
-            background: linear-gradient(135deg, #1E3A8A 0%, #1E88E5 25%, #059669 75%, #D97706 100%);
-        }
-
-        .hero-pattern {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .carousel-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-        }
-
-        .carousel-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0;
-            transition: opacity 1.5s ease-in-out;
-        }
-
-        .carousel-image.active {
-            opacity: 0.25;
-        }
-
-        .hero-content-wrapper {
-            position: relative;
-            z-index: 1;
-        }
-
-        .card-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .card-hover:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .nav-scroll {
-            transition: all 0.3s ease;
-        }
-
-        .nav-scroll.scrolled {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .corporate-badge {
-            background: linear-gradient(45deg, #1E3A8A, #059669);
-            animation: float 4s ease-in-out infinite;
-        }
-
-        .business-emoji {
-            animation: rotate-slow 20s linear infinite;
-            animation-delay: var(--delay, 0s);
-        }
-
-        .package-gradient-foundation {
-            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
-        }
-
-        .package-gradient-growth {
-            background: linear-gradient(135deg, #1E88E5 0%, #1E3A8A 100%);
-        }
-
-        .package-gradient-leadership {
-            background: linear-gradient(135deg, #D97706 0%, #B45309 100%);
-        }
-
-        .package-gradient-executive {
-            background: linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%);
-        }
-
-        .results-bg {
-            background: linear-gradient(135deg, rgba(30, 58, 138, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
-        }
-
-        .metric-card {
-            background: linear-gradient(45deg, #10B981, #059669);
-        }
-
-        .roi-highlight {
-            background: linear-gradient(45deg, #D97706, #B45309);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Padel Zone</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { 
+        font-family: 'Inter', sans-serif; 
+    }
+    #background-carousel {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.7; 
+    }
+    #background-carousel img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+    #background-carousel img.active {
+        opacity: 1;
+    }
+    /* Hide scrollbar for clean look */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    /* Accordion animation styles */
+    .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+    .collapsible-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-in-out;
+    }
+  </style>
 </head>
+<body class="bg-gray-900 text-white">
 
-<body class="font-inter text-padel-dark">
-    <!-- Navigation -->
-    <nav class="nav-scroll fixed w-full top-0 z-50 bg-white/90 backdrop-blur-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center">
-                    <div class="bg-gradient-to-r from-padel-blue to-padel-orange text-white font-poppins font-bold text-xl px-3 py-1 rounded-lg mr-4">
-                        PadelParty
-                    </div>
-                    <span class="text-corp-navy font-semibold">Corporate</span>
-                </div>
+  <!-- Background Image Carousel -->
+  <div id="background-carousel">
+    <img src="https://worldpadelzone.com/assets/images/1.jpg" class="active" alt="Padel court background" onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/000000/FFFFFF?text=Image+1+Not+Found';">
+    <img src="https://worldpadelzone.com/assets/images/2.jpg" alt="Padel players in action" onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/000000/FFFFFF?text=Image+2+Not+Found';">
+    <img src="https://worldpadelzone.com/assets/images/3.jpg" alt="Padel match" onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/000000/FFFFFF?text=Image+3+Not+Found';">
+    <img src="https://worldpadelzone.com/assets/images/4.jpg" alt="Padel racket and ball" onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/000000/FFFFFF?text=Image+4+Not+Found';">
+    <img src="https://worldpadelzone.com/assets/images/5.jpg" alt="Enjoying a game of padel" onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/000000/FFFFFF?text=Image+5+Not+Found';">
+  </div>
 
-                <div class="hidden md:block">
-                    <div class="flex items-center space-x-6">
-                        <a href="https://worldpadelzone.github.io/padelparty/" class="text-padel-dark hover:text-corp-navy transition-colors font-medium">Home</a>
-                        <a href="#programs" class="text-padel-dark hover:text-corp-navy transition-colors font-medium">Programs</a>
-                        <a href="#benefits" class="text-padel-dark hover:text-corp-navy transition-colors font-medium">Benefits</a>
-                        <a href="#packages" class="text-padel-dark hover:text-corp-navy transition-colors font-medium">Packages</a>
-                        <a href="#results" class="text-padel-dark hover:text-corp-navy transition-colors font-medium">Results</a>
-                        <button class="bg-corp-navy hover:bg-blue-800 text-white px-6 py-2 rounded-full font-semibold transition-colors">
-                            Request Proposal
-                        </button>
-                    </div>
-                </div>
-
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-padel-dark hover:text-corp-navy focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
+  <div class="relative min-h-screen overflow-y-auto no-scrollbar bg-black bg-opacity-40 flex flex-col"> 
+    <div class="flex-grow pb-24 md:pb-0">
+    <!-- Desktop Navigation -->
+    <header class="sticky top-0 z-30 bg-gray-900/80 backdrop-blur-sm border-b border-gray-800/50">
+      <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="hidden md:flex items-center">
+            <a href="index.html"><img src="https://worldpadelzone.com/logo_wpz.png" alt="World Padel Zone Logo" class="h-10 w-auto" onerror="this.style.display='none'"></a>
         </div>
-
-        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#home" class="block px-3 py-2 text-padel-dark hover:text-corp-navy font-medium">Home</a>
-                <a href="#programs" class="block px-3 py-2 text-padel-dark hover:text-corp-navy font-medium">Programs</a>
-                <a href="#benefits" class="block px-3 py-2 text-padel-dark hover:text-corp-navy font-medium">Benefits</a>
-                <a href="#packages" class="block px-3 py-2 text-padel-dark hover:text-corp-navy font-medium">Packages</a>
-                <a href="#results" class="block px-3 py-2 text-padel-dark hover:text-corp-navy font-medium">Results</a>
-                <button class="w-full text-left bg-corp-navy text-white px-3 py-2 rounded font-semibold">
-                    Request Proposal
-                </button>
-            </div>
+        <div class="hidden md:flex items-center space-x-8 text-sm">
+          <a href="levelup-beginner.html" class="text-gray-300 hover:text-white transition-colors">Level Up</a>
+          <a href="coaches.html" class="text-gray-300 hover:text-white transition-colors">Coaches Corner</a>
+          <a href="#" class="text-gray-300 hover:text-white transition-colors">Travel</a>
+          <a href="#" class="text-gray-300 hover:text-white transition-colors">News</a>
+          <a href="#" class="text-gray-300 hover:text-white transition-colors">Media</a>
         </div>
-    </nav>
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">Log In</a>
+          <a href="#" class="px-4 py-2 text-sm font-medium bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors">Sign Up</a>
+        </div>
+        <!-- Mobile Header (Logo and Sign Up) -->
+        <div class="md:hidden flex items-center justify-between w-full">
+             <a href="index.html"><img src="https://worldpadelzone.com/logo_wpz.png" alt="World Padel Zone Logo" class="h-8 w-auto" onerror="this.style.display='none'"></a>
+             <div>
+                <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors mr-4">Log In</a>
+                <a href="#" class="px-3 py-1.5 text-sm font-medium bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors">Sign Up</a>
+             </div>
+        </div>
+      </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section id="home" class="gradient-bg hero-pattern min-h-screen flex items-center pt-16">
-        <div class="carousel-container" id="hero-carousel">
-            <img src="https://raw.githubusercontent.com/WorldPadelZone/worldpadelzone/main/assets/images/7.jpg" alt="Corporate team building on padel court" class="carousel-image active">
-            <img src="https://raw.githubusercontent.com/WorldPadelZone/worldpadelzone/main/assets/images/8.jpg" alt="Business team celebrating victory" class="carousel-image">
-            <img src="https://raw.githubusercontent.com/WorldPadelZone/worldpadelzone/main/assets/images/9.jpg" alt="Executive leadership development" class="carousel-image">
+    <main class="relative z-10 px-6 pt-16 pb-24 text-center">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-6xl font-bold tracking-tight leading-tight mb-6">
+          Explore the World of Padel
+        </h1>
+        <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+          From court-side tips to global destinations, gear reviews to club spotlights — World Padel Zone is your hub for all things padel.<br>
+          Play better. Travel farther. Live the padel lifestyle.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://playtomic.com/padel-courts" target="_blank" rel="noopener noreferrer" class="px-8 py-4 bg-cyan-500 text-white text-base font-medium rounded-lg hover:bg-cyan-600 transition-colors shadow-lg">Book a Court</a>
+          <a href="https://worldpadelzone.com/pages/events.html" class="px-8 py-4 bg-gray-700 text-white text-base font-medium rounded-lg hover:bg-gray-600 transition-colors shadow-lg">Find a Tournament</a>
         </div>
+      </div>
+    </main>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 hero-content-wrapper">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="text-white animate-fade-in">
-                    <div class="flex items-center space-x-4 mb-6">
-                        <span class="business-emoji text-4xl" style="--delay: 0s">🚀</span>
-                        <span class="business-emoji text-4xl" style="--delay: 5s">💼</span>
-                        <span class="business-emoji text-4xl" style="--delay: 10s">🏆</span>
-                        <span class="business-emoji text-4xl" style="--delay: 15s">⚡</span>
-                    </div>
-                    
-                    <h1 class="font-poppins font-bold text-4xl md:text-6xl lg:text-7xl leading-tight mb-6">
-                        Transform Your
-                        <span class="text-yellow-300">Team</span>
-                        Through Padel
-                    </h1>
-                    
-                    <p class="text-xl md:text-2xl mb-8 text-blue-100 font-light">
-                        Revolutionary team building that delivers measurable results. Build stronger relationships, improve communication, and boost performance in Cape Town's most inspiring locations.
-                    </p>
-                    
-                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
-                        <button class="bg-corp-gold hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105">
-                            🎯 Get Custom Proposal
-                        </button>
-                        <button class="border-2 border-white text-white hover:bg-white hover:text-corp-navy px-8 py-4 rounded-full font-semibold text-lg transition-all">
-                            📊 View Success Stories
-                        </button>
-                    </div>
-
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-                        <div class="corporate-badge text-white rounded-full px-4 py-2 text-center">
-                            <div class="font-bold text-lg">🤝</div>
-                            <div class="text-xs">Team Building</div>
-                        </div>
-                        <div class="corporate-badge text-white rounded-full px-4 py-2 text-center" style="animation-delay: 1s">
-                            <div class="font-bold text-lg">💡</div>
-                            <div class="text-xs">Leadership Dev</div>
-                        </div>
-                        <div class="corporate-badge text-white rounded-full px-4 py-2 text-center" style="animation-delay: 2s">
-                            <div class="font-bold text-lg">🎯</div>
-                            <div class="text-xs">Client Events</div>   
-                        </div>
-                        <div class="corporate-badge text-white rounded-full px-4 py-2 text-center" style="animation-delay: 3s">
-                            <div class="font-bold text-lg">📈</div>
-                            <div class="text-xs">Performance</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative animate-slide-up">
-                    <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
-                        <div class="bg-white rounded-2xl p-6 shadow-2xl">
-                            <div class="text-center mb-4">
-                                <span class="text-4xl">📋</span>
-                                <h3 class="font-poppins font-bold text-padel-dark text-xl">Free Team Assessment</h3>
-                                <p class="text-sm text-gray-600">Discover your team's potential with our custom analysis</p>
-                            </div>
-                            <form class="space-y-4">
-                                <div>
-                                    <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-corp-navy focus:border-transparent">
-                                        <option>Primary Goal</option>
-                                        <option>🤝 Improve team collaboration</option>
-                                        <option>💡 Develop leadership skills</option>
-                                        <option>🎯 Enhance communication</option>
-                                        <option>🏆 Boost morale & engagement</option>
-                                        <option>🌟 Client entertainment</option>
-                                    </select>
-                                </div>
-                                <div class="grid grid-cols-2 gap-3">
-                                    <input type="text" placeholder="Company Name" class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-corp-navy focus:border-transparent">
-                                    <input type="text" placeholder="Your Role" class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-corp-navy focus:border-transparent">
-                                </div>
-                                <input type="email" placeholder="Business Email" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-corp-navy focus:border-transparent">
-                                <div class="grid grid-cols-2 gap-3">
-                                    <input type="tel" placeholder="Phone" class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-corp-navy focus:border-transparent">
-                                    <input type="number" placeholder="Team Size" class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-corp-navy focus:border-transparent">
-                                </div>
-                                <button type="submit" class="w-full bg-corp-navy hover:bg-blue-800 text-white font-semibold py-3 rounded-lg transition-colors">
-                                    📊 Get Free Assessment
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+    <!-- Level Up Section -->
+    <section id="level-up-section" class="relative z-10 px-6 py-24 bg-gray-900 bg-opacity-80">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">🚀 Level Up Your Game</h2>
+            <p class="text-gray-400 mb-8">Select your current level to get a personalized step-by-step course to improve your padel skills.</p>
+            <div id="padel-course-accordion" class="w-full text-left space-y-2">
+                <!-- Accordion items will be dynamically inserted here by JavaScript -->
             </div>
         </div>
     </section>
 
-    <!-- Programs Section -->
-    <section id="programs" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="font-poppins font-bold text-4xl md:text-5xl text-padel-dark mb-6">
-                    Proven Programs That Drive Results
-                </h2>
-                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
-                    Our research-backed approach combines sport psychology, team dynamics, and leadership development to create transformational experiences for your organization.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="card-hover bg-white rounded-2xl p-6 shadow-lg border-2 border-success-green/20">
-                    <div class="text-center mb-4">
-                        <div class="package-gradient-foundation text-white rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
-                            <span class="text-2xl">🤝</span>
-                        </div>
-                        <h3 class="font-poppins font-bold text-xl text-padel-dark">Foundation Building</h3>
-                        <p class="text-success-green font-semibold">Trust & Communication</p>
-                    </div>
-                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
-                        <li class="flex items-center"><span class="text-success-green mr-2">✓</span> Ice-breaking activities</li>
-                        <li class="flex items-center"><span class="text-success-green mr-2">✓</span> Communication workshops</li>
-                        <li class="flex items-center"><span class="text-success-green mr-2">✓</span> Trust building exercises</li>
-                        <li class="flex items-center"><span class="text-success-green mr-2">✓</span> Team bonding matches</li>
-                        <li class="flex items-center"><span class="text-success-green mr-2">✓</span> Conflict resolution</li>
-                    </ul>
-                    <div class="text-padel-dark font-bold text-lg mb-4">From R15,000</div>
-                </div>
-
-                <div class="card-hover bg-white rounded-2xl p-6 shadow-lg border-2 border-padel-blue/20">
-                    <div class="text-center mb-4">
-                        <div class="package-gradient-growth text-white rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
-                            <span class="text-2xl">📈</span>
-                        </div>
-                        <h3 class="font-poppins font-bold text-xl text-padel-dark">Performance Growth</h3>
-                        <p class="text-padel-blue font-semibold">Skills & Strategy</p>
-                    </div>
-                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
-                        <li class="flex items-center"><span class="text-padel-blue mr-2">✓</span> Goal setting workshops</li>
-                        <li class="flex items-center"><span class="text-padel-blue mr-2">✓</span> Performance analytics</li>
-                        <li class="flex items-center"><span class="text-padel-blue mr-2">✓</span> Strategic thinking games</li>
-                        <li class="flex items-center"><span class="text-padel-blue mr-2">✓</span> Problem-solving challenges</li>
-                        <li class="flex items-center"><span class="text-padel-blue mr-2">✓</span> Feedback systems</li>
-                    </ul>
-                    <div class="text-padel-dark font-bold text-lg mb-4">From R25,000</div>
-                </div>
-
-                <div class="card-hover bg-white rounded-2xl p-6 shadow-lg border-2 border-corp-gold/20">
-                    <div class="text-center mb-4">
-                        <div class="package-gradient-leadership text-white rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
-                            <span class="text-2xl">👑</span>
-                        </div>
-                        <h3 class="font-poppins font-bold text-xl text-padel-dark">Leadership Excellence</h3>
-                        <p class="text-corp-gold font-semibold">Management Development</p>
-                    </div>
-                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
-                        <li class="flex items-center"><span class="text-corp-gold mr-2">✓</span> Leadership assessments</li>
-                        <li class="flex items-center"><span class="text-corp-gold mr-2">✓</span> Decision-making scenarios</li>
-                        <li class="flex items-center"><span class="text-corp-gold mr-2">✓</span> Coaching techniques</li>
-                        <li class="flex items-center"><span class="text-corp-gold mr-2">✓</span> Influence & motivation</li>
-                        <li class="flex items-center"><span class="text-corp-gold mr-2">✓</span> Vision alignment</li>
-                    </ul>
-                    <div class="text-padel-dark font-bold text-lg mb-4">From R45,000</div>
-                </div>
-
-                <div class="card-hover bg-white rounded-2xl p-6 shadow-lg border-2 border-premium-purple/20">
-                    <div class="text-center mb-4">
-                        <div class="package-gradient-executive text-white rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
-                            <span class="text-2xl">💎</span>
-                        </div>
-                        <h3 class="font-poppins font-bold text-xl text-padel-dark">Executive Retreats</h3>
-                        <p class="text-premium-purple font-semibold">C-Suite Experiences</p>
-                    </div>
-                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
-                        <li class="flex items-center"><span class="text-premium-purple mr-2">✓</span> Strategic planning sessions</li>
-                        <li class="flex items-center"><span class="text-premium-purple mr-2">✓</span> Executive coaching</li>
-                        <li class="flex items-center"><span class="text-premium-purple mr-2">✓</span> Board alignment</li>
-                        <li class="flex items-center"><span class="text-premium-purple mr-2">✓</span> Vision workshops</li>
-                        <li class="flex items-center"><span class="text-premium-purple mr-2">✓</span> Succession planning</li>
-                    </ul>
-                    <div class="text-padel-dark font-bold text-lg mb-4">From R85,000</div>
-                </div>
+    <!-- Explore More Section -->
+    <section id="explore-more-section" class="relative z-10 px-6 py-24">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Discover More</h2>
+            <p class="text-gray-400 mb-12 max-w-2xl mx-auto">Dive deeper into the world of padel with our dedicated sections on gear, tactics, destinations, and more.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card Links -->
+                <a href="https://worldpadelzone.com/pages/coachescorner.html" class="group block p-8 text-center bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:-translate-y-1"><h3 class="text-xl font-bold mb-2 text-cyan-300">Coaches Corner</h3><p class="text-sm text-gray-300">Find the perfect coach to elevate your game.</p></a>
+                <a href="https://worldpadelzone.com/pages/strategy.html" class="group block p-8 text-center bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:-translate-y-1"><h3 class="text-xl font-bold mb-2 text-cyan-300">Strategy & Tips</h3><p class="text-sm text-gray-300">Improve your tactics with pro advice and game-winning strategies.</p></a>
+                <a href="https://worldpadelzone.com/pages/destinations.html" class="group block p-8 text-center bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:-translate-y-1"><h3 class="text-xl font-bold mb-2 text-cyan-300">Destinations</h3><p class="text-sm text-gray-300">Explore the best padel courts and resorts around the world.</p></a>
+                <a href="https://worldpadelzone.com/pages/news.html" class="group block p-8 text-center bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:-translate-y-1"><h3 class="text-xl font-bold mb-2 text-cyan-300">News</h3><p class="text-sm text-gray-300">Stay up-to-date with the latest from the professional padel tour.</p></a>
+                <a href="https://worldpadelzone.com/pages/media.html" class="group block p-8 text-center bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:-translate-y-1"><h3 class="text-xl font-bold mb-2 text-cyan-300">Padel Media</h3><p class="text-sm text-gray-300">Resources and services for clubs to grow their presence.</p></a>
+                <a href="https://worldpadelzone.com/pages/events.html" class="group block p-8 text-center bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:-translate-y-1"><h3 class="text-xl font-bold mb-2 text-cyan-300">Event Calendar</h3><p class="text-sm text-gray-300">Find upcoming tournaments and events near you.</p></a>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section id="benefits" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="font-poppins font-bold text-4xl md:text-5xl text-padel-dark mb-6">
-                        Why Padel Transforms Teams
-                    </h2>
-                    <p class="text-xl text-gray-700 mb-8">
-                        Unlike traditional team building, padel creates a unique environment where natural leadership emerges, communication improves organically, and relationships deepen through shared challenges.
-                    </p>
-
-                    <div class="space-y-6">
-                        <div class="flex items-start space-x-4">
-                            <div class="bg-success-green text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
-                                <span class="text-2xl">🧠</span>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-lg text-padel-dark mb-2">Psychological Safety</h4>
-                                <p class="text-gray-700">Padel's collaborative nature naturally creates psychological safety, encouraging team members to take risks and communicate openly.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-4">
-                            <div class="bg-padel-blue text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
-                                <span class="text-2xl">⚡</span>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-lg text-padel-dark mb-2">Real-Time Problem Solving</h4>
-                                <p class="text-gray-700">Teams must adapt strategies instantly, developing agility and decision-making skills that transfer directly to business scenarios.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-4">
-                            <div class="bg-corp-gold text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
-                                <span class="text-2xl">🎯</span>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-lg text-padel-dark mb-2">Natural Leadership Emergence</h4>
-                                <p class="text-gray-700">Leadership roles emerge organically during play, revealing hidden talents and developing confidence in new leaders.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-4">
-                            <div class="bg-premium-purple text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
-                                <span class="text-2xl">🤝</span>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-lg text-padel-dark mb-2">Accelerated Trust Building</h4>
-                                <p class="text-gray-700">Shared vulnerability and mutual dependence in doubles play builds trust faster than traditional exercises.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative">
-                    <div class="bg-gradient-to-br from-corp-navy to-success-green rounded-3xl p-8 text-white">
-                        <h3 class="font-poppins font-bold text-2xl mb-6 text-center">Research-Backed Benefits</h3>
-                        
-                        <div class="space-y-6">
-                            <div class="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
-                                <div class="flex items-center justify-between mb-2">
-                                    <span class="font-semibold">Team Cohesion</span>
-                                    <span class="text-yellow-300 font-bold">+47%</span>
-                                </div>
-                                <div class="w-full bg-white/20 rounded-full h-2">
-                                    <div class="bg-yellow-300 h-2 rounded-full" style="width: 47%"></div>
-                                </div>
-                            </div>
-                            
-                            <div class="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
-                                <div class="flex items-center justify-between mb-2">
-                                    <span class="font-semibold">Communication Quality</span>
-                                    <span class="text-yellow-300 font-bold">+62%</span>
-                                </div>
-                                <div class="w-full bg-white/20 rounded-full h-2">
-                                    <div class="bg-yellow-300 h-2 rounded-full" style="width: 62%"></div>
-                                </div>
-                            </div>
-
-                            <div class="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
-                                <div class="flex items-center justify-between mb-2">
-                                    <span class="font-semibold">Problem-Solving Speed</span>
-                                    <span class="text-yellow-300 font-bold">+38%</span>
-                                </div>
-                                <div class="w-full bg-white/20 rounded-full h-2">
-                                    <div class="bg-yellow-300 h-2 rounded-full" style="width: 38%"></div>
-                                </div>
-                            </div>
-
-                            <div class="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
-                                <div class="flex items-center justify-between mb-2">
-                                    <span class="font-semibold">Employee Engagement</span>
-                                    <span class="text-yellow-300 font-bold">+73%</span>
-                                </div>
-                                <div class="w-full bg-white/20 rounded-full h-2">
-                                    <div class="bg-yellow-300 h-2 rounded-full" style="width: 73%"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-8 p-4 roi-highlight rounded-xl text-center">
-                            <div class="font-poppins font-bold text-2xl">4.2x</div>
-                            <div class="text-sm text-orange-100">ROI on Team Investment</div>
-                            <div class="text-xs text-orange-200 mt-1">Measured over 12 months</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Packages Section -->
-    <section id="packages" class="py-20 bg-gradient-to-br from-gray-50 to-indigo-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="font-poppins font-bold text-4xl md:text-5xl text-padel-dark mb-6">
-                    Investment Packages That Deliver
-                </h2>
-                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
-                    Choose the program that matches your team's needs and budget. All packages include professional facilitation, equipment, venues, and comprehensive reporting.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Catalyst Package -->
-                <div class="card-hover bg-gradient-to-br from-success-green/10 to-corp-emerald/10 rounded-2xl p-8 border-2 border-success-green/30">
-                    <div class="text-center mb-6">
-                        <div class="bg-success-green text-white rounded-full w-20 h-20 flex items-center justify-center mb-4 mx-auto">
-                            <span class="text-3xl">🚀</span>
-                        </div>
-                        <h3 class="font-poppins font-bold text-2xl text-padel-dark">Team Catalyst</h3>
-                        <p class="text-success-green font-semibold">Half-Day Foundation</p>
-                    </div>
-                    
-                    <div class="text-center mb-6">
-                        <div class="text-3xl font-bold text-padel-dark">R15,000</div>
-                        <div class="text-gray-600">Up to 20 people • 4 hours</div>
-                    </div>
-
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center"><span class="text-success-green mr-3">✓</span> Team assessment</li>
-                        <li class="flex items-center"><span class="text-success-green mr-3">✓</span> Padel introduction</li>
-                        <li class="flex items-center"><span class="text-success-green mr-3">✓</span> Communication workshop</li>
-                        <li class="flex items-center"><span class="text-success-green mr-3">✓</span> Trust-building games</li>
-                        <li class="flex items-center"><span class="text-success-green mr-3">✓</span> Action planning session</li>
-                        <li class="flex items-center"><span class="text-success-green mr-3">✓</span> Progress report</li>
-                    </ul>
-
-                    <div class="bg-white rounded-lg p-4 mb-6">
-                        <div class="text-sm text-gray-600 mb-2">Perfect for:</div>
-                        <div class="text-xs text-gray-500">
-                            • New teams<br>
-                            • Department integration<br>
-                            • Communication challenges
-                        </div>
-                    </div>
-
-                    <button class="w-full bg-success-green hover:bg-green-600 text-white font-semibold py-3 rounded-lg transition-colors">
-                        Start Your Journey
-                    </button>
-                </div>
-
-                <!-- Accelerator Package -->
-                <div class="card-hover bg-gradient-to-br from-padel-blue/10 to-corp-navy/10 rounded-2xl p-8 border-2 border-padel-blue/30 relative">
-                    <div class="absolute top-4 right-4 bg-padel-blue text-white text-xs px-3 py-1 rounded-full">
-                        MOST POPULAR
-                    </div>
-                    
-                    <div class="text-center mb-6">
-                        <div class="bg-padel-blue text-white rounded-full w-20 h-20 flex items-center justify-center mb-4 mx-auto">
-                            <span class="text-3xl">⚡</span>
-                        </div>
-                        <h3 class="font-poppins font-bold text-2xl text-padel-dark">Performance Accelerator</h3>
-                        <p class="text-padel-blue font-semibold">Full-Day Transformation</p>
-                    </div>
-                    
-                    <div class="text-center mb-6">
-                        <div class="text-3xl font-bold text-padel-dark">R35,000</div>
-                        <div class="text-gray-600">Up to 30 people • 8 hours</div>
-                    </div>
-
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center"><span class="text-padel-blue mr-3">✓</span> Comprehensive assessment</li>
-                        <li class="flex items-center"><span class="text-padel-blue mr-3">✓</span> Skills development</li>
-                        <li class="flex items-center"><span class="text-padel-blue mr-3">✓</span> Leadership challenges</li>
-                        <li class="flex items-center"><span class="text-padel-blue mr-3">✓</span> Strategy workshops</li>
-                        <li class="flex items-center"><span class="text-padel-blue mr-3">✓</span> Performance analytics</li>
-                        <li class="flex items-center"><span class="text-padel-blue mr-3">✓</span> 3-month follow-up</li>
-                    </ul>
-
-                    <div class="bg-white rounded-lg p-4 mb-6">
-                        <div class="text-sm text-gray-600 mb-2">Includes:</div>
-                        <div class="text-xs text-gray-500">
-                            • Catered lunch<br>
-                            • Individual reports<br>
-                            • Digital resources
-                        </div>
-                    </div>
-
-                    <button class="w-full bg-padel-blue hover:bg-blue-600 text-white font-semibold py-3 rounded-lg transition-colors">
-                        Transform Your Team
-                    </button>
-                </div>
-
-                <!-- Executive Package -->
-                <div class="card-hover bg-gradient-to-br from-premium-purple/10 to-corp-gold/10 rounded-2xl p-8 border-2 border-premium-purple/30">
-                    <div class="text-center mb-6">
-                        <div class="bg-premium-purple text-white rounded-full w-20 h-20 flex items-center justify-center mb-4 mx-auto">
-                            <span class="text-3xl">👑</span>
-                        </div>
-                        <h3 class="font-poppins font-bold text-2xl text-padel-dark">Executive Mastery</h3>
-                        <p class="text-premium-purple font-semibold">Multi-Day Retreat</p>
-                    </div>
-                    
-                    <div class="text-center mb-6">
-                        <div class="text-3xl font-bold text-padel-dark">R125,000</div>
-                        <div class="text-gray-600">Up to 15 executives • 3 days</div>
-                    </div>
-
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center"><span class="text-premium-purple mr-3">✓</span> Executive coaching</li>
-                        <li class="flex items-center"><span class="text-premium-purple mr-3">✓</span> Strategic planning</li>
-                        <li class="flex items-center"><span class="text-premium-purple mr-3">✓</span> Leadership development</li>
-                        <li class="flex items-center"><span class="text-premium-purple mr-3">✓</span> Vision alignment</li>
-                        <li class="flex items-center"><span class="text-premium-purple mr-3">✓</span> Succession planning</li>
-                        <li class="flex items-center"><span class="text-premium-purple mr-3">✓</span> 12-month program</li>
-                    </ul>
-
-                    <div class="bg-white rounded-lg p-4 mb-6">
-                        <div class="text-sm text-gray-600 mb-2">Premium Experience:</div>
-                        <div class="text-xs text-gray-500">
-                            • Luxury accommodation<br>
-                            • Executive chef<br>
-                            • Personal development plans
-                        </div>
-                    </div>
-
-                    <button class="w-full bg-premium-purple hover:bg-purple-600 text-white font-semibold py-3 rounded-lg transition-colors">
-                        Elevate Leadership
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Results Section -->
-    <section id="results" class="py-20 results-bg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="font-poppins font-bold text-4xl md:text-5xl text-padel-dark mb-6">
-                    Proven Results From Leading Companies
-                </h2>
-                <p class="text-xl text-gray-700">
-                    See how Cape Town's top organizations have transformed their teams through our programs.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8 mb-12">
-                <div class="bg-white rounded-2xl p-8 shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-corp-navy text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">
-                            T
-                        </div>
-                        <div class="ml-4">
-                            <div class="font-semibold">TechCorp Solutions</div>
-                            <div class="text-sm text-gray-500">IT Services • 45 employees</div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-4">
-                        "Our development team went from siloed to synchronized. Project delivery improved by 35% and our employee satisfaction scores hit an all-time high. Best investment we've made."
-                    </p>
-                    <div class="flex text-yellow-400 mb-2">
-                        ⭐⭐⭐⭐⭐
-                    </div>
-                    <div class="text-xs text-gray-500">Performance Accelerator • 6-month tracking</div>
-                </div>
-
-                <div class="bg-white rounded-2xl p-8 shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-success-green text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">
-                            M
-                        </div>
-                        <div class="ml-4">
-                            <div class="font-semibold">MedGroup Consulting</div>
-                            <div class="text-sm text-gray-500">Healthcare • 28 professionals</div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-4">
-                        "The leadership skills our managers developed were immediately applicable. We've seen a 40% reduction in internal conflicts and decision-making is much more collaborative."
-                    </p>
-                    <div class="flex text-yellow-400 mb-2">
-                        ⭐⭐⭐⭐⭐
-                    </div>
-                    <div class="text-xs text-gray-500">Leadership Excellence • Quarterly sessions</div>
-                </div>
-
-                <div class="bg-white rounded-2xl p-8 shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-corp-gold text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">
-                            F
-                        </div>
-                        <div class="ml-4">
-                            <div class="font-semibold">FinServ Partners</div>
-                            <div class="text-sm text-gray-500">Financial Services • 60 staff</div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-4">
-                        "After the executive retreat, our C-suite alignment was remarkable. We launched three major initiatives in record time and our board relationships have never been stronger."
-                    </p>
-                    <div class="flex text-yellow-400 mb-2">
-                        ⭐⭐⭐⭐⭐
-                    </div>
-                    <div class="text-xs text-gray-500">Executive Mastery • Strategic planning</div>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-2xl p-8 max-w-4xl mx-auto shadow-lg">
-                <h3 class="font-poppins font-bold text-2xl text-center text-padel-dark mb-8">Measurable Business Impact</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <div class="text-center">
-                        <div class="metric-card text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                            <span class="text-2xl font-bold">94%</span>
-                        </div>
-                        <div class="text-gray-600 text-sm">Client Satisfaction</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="metric-card text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                            <span class="text-2xl font-bold">67%</span>
-                        </div>
-                        <div class="text-gray-600 text-sm">Performance Increase</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="metric-card text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                            <span class="text-2xl font-bold">2.1x</span>
-                        </div>
-                        <div class="text-gray-600 text-sm">ROI Achievement</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="metric-card text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                            <span class="text-2xl font-bold">89%</span>
-                        </div>
-                        <div class="text-gray-600 text-sm">Retention Rate</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="gradient-bg py-20">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="animate-bounce-gentle mb-6">
-                <span class="text-6xl">🚀</span>
-            </div>
-            <h2 class="font-poppins font-bold text-4xl md:text-5xl text-white mb-6">
-                Ready to Transform Your Team?
-            </h2>
-            <p class="text-xl text-blue-100 mb-8">
-                Join the leading Cape Town companies who've discovered the power of padel team building. Get your custom proposal and start your transformation journey today.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <button class="bg-corp-gold hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105">
-                    📊 Get Custom Proposal
-                </button>
-                <button class="border-2 border-white text-white hover:bg-white hover:text-corp-navy px-8 py-4 rounded-full font-semibold text-lg transition-all">
-                    📞 Schedule Consultation
-                </button>
-            </div>
+    <!-- Community Section -->
+    <section id="community-section" class="relative z-10 px-6 py-24 bg-gray-900 bg-opacity-80">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">The padel revolution is here!</h2>
+            <p class="text-gray-400 mb-12 max-w-3xl mx-auto">Join a vibrant community thriving on the world's most engaging racket sport, where every game builds skill and strengthens bonds.</p>
             
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto">
-                <div class="text-white mb-4">
-                    <div class="font-semibold">🎁 Limited Time Offer:</div>
-                    <div>Free team assessment with every program booking (R5,000 value)</div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16 text-left">
+                <!-- Free Perks -->
+                <div class="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="font-bold text-lg text-white">Member Perks</h3>
+                        <span class="bg-cyan-500/20 text-cyan-300 text-xs font-semibold px-2 py-1 rounded-full">Free</span>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-4">Enjoy exclusive discounts and special offers on equipment and services.</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Discounts on equipment and apparel</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Special travel package deals</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Partner deals with clubs and coaches</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Exclusive event access</li>
+                    </ul>
                 </div>
-                <div class="text-blue-100 text-sm">
-                    📅 Flexible scheduling • 📍 Premium Camps Bay venues • 📈 Guaranteed results
+                <div class="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="font-bold text-lg text-white">Find Players Near You</h3>
+                        <span class="bg-cyan-500/20 text-cyan-300 text-xs font-semibold px-2 py-1 rounded-full">Free</span>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-4">Connect with players in your area based on location and skill level.</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Advanced partner finder system</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Match based on location and skill level</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Real-time player availability</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Skill-based matching algorithm</li>
+                    </ul>
                 </div>
+                 <div class="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="font-bold text-lg text-white">Community Recognition</h3>
+                        <span class="bg-cyan-500/20 text-cyan-300 text-xs font-semibold px-2 py-1 rounded-full">Free</span>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-4">Get recognized for your contributions and achievements.</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Leaderboards and rankings</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Player spotlights and shoutouts</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Incentives for contributions</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Community awards and recognition</li>
+                    </ul>
+                </div>
+
+                <div class="bg-yellow-500/10 p-6 rounded-lg border border-yellow-500/30">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="font-bold text-lg text-white">Exclusive Content</h3>
+                        <span class="bg-yellow-500/20 text-yellow-300 text-xs font-semibold px-2 py-1 rounded-full">Premium</span>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-4">Get access to premium tutorials, expert tips, and professional match breakdowns.</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Early access to tutorials and expert tips</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Pro match breakdowns and analysis</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Members-only gear guides & training plans</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Exclusive destination deals</li>
+                    </ul>
+                </div>
+                 <div class="bg-yellow-500/10 p-6 rounded-lg border border-yellow-500/30">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="font-bold text-lg text-white">Track Your Progress</h3>
+                        <span class="bg-yellow-500/20 text-yellow-300 text-xs font-semibold px-2 py-1 rounded-full">Premium</span>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-4">Monitor your improvement with comprehensive tracking and analytics.</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Save your drills and training sessions</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Track wins and performance metrics</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Personal dashboard with insights</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Achievement badge system</li>
+                    </ul>
+                </div>
+                 <div class="bg-yellow-500/10 p-6 rounded-lg border border-yellow-500/30">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="font-bold text-lg text-white">Priority Access</h3>
+                        <span class="bg-yellow-500/20 text-yellow-300 text-xs font-semibold px-2 py-1 rounded-full">Premium</span>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-4">Be the first to access camps, events, and exclusive opportunities.</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>First booking for camps and events</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Priority entry for giveaways</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Early access to new features</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>VIP event invitations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 class="text-2xl md:text-3xl font-bold mb-8">Community Highlights</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white/5 backdrop-blur-lg p-6 rounded-xl border border-white/10">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-cyan-500/20 mx-auto mb-4">
+                        <svg class="w-6 h-6 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.124-1.28-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.653.124-1.28.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <p class="text-4xl font-bold">2,847</p>
+                    <p class="text-gray-400 text-sm mt-1">Active Members</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-lg p-6 rounded-xl border border-white/10">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-cyan-500/20 mx-auto mb-4">
+                        <svg class="w-6 h-6 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    </div>
+                    <p class="text-4xl font-bold">156</p>
+                    <p class="text-gray-400 text-sm mt-1">Success Stories This Month</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-lg p-6 rounded-xl border border-white/10">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-cyan-500/20 mx-auto mb-4">
+                        <svg class="w-6 h-6 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <p class="text-4xl font-bold">89</p>
+                    <p class="text-gray-400 text-sm mt-1">Events Hosted This Year</p>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-cyan-500 to-blue-500 p-8 rounded-lg">
+                <h3 class="text-2xl font-bold mb-2">Ready to Join the Community?</h3>
+                <p class="text-gray-200 mb-6">Start your padel journey with exclusive member benefits today!</p>
+                <a href="#" class="px-8 py-3 bg-white text-gray-900 font-bold rounded-lg hover:bg-gray-200 transition-colors">Join Community</a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-padel-dark text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center mb-4">
-                        <div class="bg-gradient-to-r from-padel-blue to-padel-orange text-white font-poppins font-bold text-xl px-3 py-1 rounded-lg mr-2">
-                            PadelParty
-                        </div>
-                        <span class="text-corp-navy font-semibold">Corporate</span>
-                    </div>
-                    <p class="text-gray-300 mb-4">
-                        Transforming Cape Town businesses through innovative padel-based team building and leadership development programs.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-corp-gold transition-colors">📘</a>
-                        <a href="#" class="text-gray-400 hover:text-corp-gold transition-colors">💼</a>
-                        <a href="#" class="text-gray-400 hover:text-corp-gold transition-colors">📊</a>
-                        <a href="#" class="text-gray-400 hover:text-corp-gold transition-colors">🎯</a>
-                    </div>
-                </div>
+    </div>
 
-                <div>
-                    <h4 class="font-semibold text-lg mb-4">Programs</h4>
-                    <ul class="space-y-2 text-gray-300">
-                        <li><a href="#" class="hover:text-corp-gold transition-colors">🤝 Foundation Building</a></li>
-                        <li><a href="#" class="hover:text-corp-gold transition-colors">📈 Performance Growth</a></li>
-                        <li><a href="#" class="hover:text-corp-gold transition-colors">👑 Leadership Excellence</a></li>
-                        <li><a href="#" class="hover:text-corp-gold transition-colors">💎 Executive Retreats</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-semibold text-lg mb-4">Business Solutions</h4>
-                    <ul class="space-y-2 text-gray-300">
-                        <li>📍 Camps Bay & Sandton venues</li>
-                        <li>📞 021-TEAM-BUILD (8326)</li>
-                        <li>✉️ corporate@padelparty.co.za</li>
-                        <li>🕒 Mon-Fri: 8AM-6PM</li>
-                        <li>📅 Custom scheduling available</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-semibold text-lg mb-4">Resource Center</h4>
-                    <p class="text-gray-300 mb-4">Download leadership resources, ROI calculators, and team assessment tools.</p>
-                    <div class="flex mb-4">
-                        <input type="email" placeholder="Business email" class="flex-1 px-4 py-2 rounded-l-lg text-gray-900">
-                        <button class="bg-corp-navy hover:bg-blue-800 px-4 py-2 rounded-r-lg transition-colors">
-                            Access
-                        </button>
-                    </div>
-                    <div class="text-xs text-gray-400">
-                        🔒 Professional use only • No spam • Unsubscribe anytime
-                    </div>
+    <footer class="relative z-10 bg-gray-900 bg-opacity-95 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+                <div class="lg:col-span-1">
+                    <h3 class="text-lg font-semibold text-white mb-2">Subscribe to our Newsletter</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Get the latest news, travel deals, and padel tips straight to your inbox.</p>
+                    <form action="mailto:hello@worldpadelzone.com" method="post" enctype="text/plain" class="flex flex-col sm:flex-row gap-2 max-w-md">
+                        <input type="email" name="email" placeholder="Enter your email" required class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white text-sm">
+                        <button type="submit" class="px-5 py-2 bg-cyan-500 text-white font-medium rounded-md hover:bg-cyan-600 transition-colors whitespace-nowrap text-sm">Subscribe</button>
+                    </form>
                 </div>
             </div>
-
-            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 PadelParty Corporate. All rights reserved. | Privacy Policy | Terms of Service</p>
-                <p class="text-xs mt-2">Professional development programs • Certified facilitators • Results guaranteed</p>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+                <div class="text-center md:text-left">
+                    <a href="mailto:hello@worldpadelzone.com" class="text-sm text-gray-400 hover:text-cyan-400 transition-colors">hello@worldpadelzone.com</a>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://www.instagram.com/worldpadelzone/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c-4.04.05-5.85.22-6.73.52a4.43 4.43 0 00-1.6 1.6C3.7 5.03 3.5 6.84 3.5 10.88v2.24c0 4.04.22 5.85.52 6.73a4.43 4.43 0 001.6 1.6c.88.3 2.69.5 6.73.52h2.24c4.04 0 5.85-.22 6.73-.52a4.43 4.43 0 001.6-1.6c.3-.88.5-2.69.52-6.73v-2.24c0-4.04-.22-5.85-.52-6.73a4.43 4.43 0 00-1.6-1.6C18.16 2.22 16.35 2.05 12.315 2zM12 7.17a4.83 4.83 0 100 9.66 4.83 4.83 0 000-9.66zM12 15a3 3 0 110-6 3 3 0 010 6zm6.4-8.27a1.2 1.2 0 100-2.4 1.2 1.2 0 000 2.4z" clip-rule="evenodd" /></svg>
+                        <span class="sr-only">Instagram</span>
+                    </a>
+                    <a href="https://www.facebook.com/worldpadelzone" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                        <span class="sr-only">Facebook</span>
+                    </a>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-sm text-gray-500">&copy; WorldPadelZone 2025</p>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
+    <nav class="md:hidden fixed bottom-0 left-0 right-0 z-30 bg-gray-900/90 backdrop-blur-sm border-t border-gray-800">
+        <div class="flex justify-around items-center h-16">
+            <a href="https://worldpadelzone.com/pages/coachescorner.html" class="flex flex-col items-center text-gray-400 hover:text-cyan-400 transition-colors">
+                <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                <span class="text-xs font-medium">Coaches</span>
+            </a>
+            <a href="https://worldpadelzone.com/pages/travel.html" class="flex flex-col items-center text-gray-400 hover:text-cyan-400 transition-colors">
+                <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                <span class="text-xs font-medium">Travel</span>
+            </a>
+            <a href="https://worldpadelzone.com/pages/news.html" class="flex flex-col items-center text-gray-400 hover:text-cyan-400 transition-colors">
+                <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 2l-2-2m0 0l-2 2m2-2v12"></path></svg>
+                <span class="text-xs font-medium">News</span>
+            </a>
+            <a href="https://worldpadelzone.com/pages/media.html" class="flex flex-col items-center text-gray-400 hover:text-cyan-400 transition-colors">
+                <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.55a2 2 0 01.99 1.69V18a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2h9.55a2 2 0 011.69.99L15 10z"></path></svg>
+                <span class="text-xs font-medium">Media</span>
+            </a>
+        </div>
+    </nav>
+  </div>
 
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Background carousel logic
+      const carousel = document.getElementById('background-carousel');
+      const images = carousel.getElementsByTagName('img');
+      let currentIndex = 0;
+      const totalImages = images.length;
+      const intervalTime = 4000;
+
+      function changeImage() {
+        if (images.length > 0) {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % totalImages;
+            images[currentIndex].classList.add('active');
+        }
+      }
+      setInterval(changeImage, intervalTime);
+
+      // --- Course Accordion Logic ---
+      const courseLevels = [
+        {
+            id: "level-1",
+            title: "Brand new, never played but want to get started",
+            modules: [
+                { title: "Module 1: The Basics", content: "Understanding the court layout, the unique glass walls, scoring, and basic rules of play." },
+                { title: "Module 2: Your First Hit", content: "Learn the continental grip, ready position, and practice simple forehand and backhand shots." },
+                { title: "Module 3: Introduction to the Volley", content: "Step up to the net and learn the fundamentals of volleying the ball before it bounces." }
+            ]
+        },
+        {
+            id: "level-2",
+            title: "Beginner, played a few times and now want to improve",
+            modules: [
+                { title: "Module 1: Using the Walls", content: "Learn to let the ball hit the back and side walls and play it confidently on the return." },
+                { title: "Module 2: The Bandeja Shot", content: "Master the bandeja, a key defensive overhead shot to maintain your position at the net." },
+                { title: "Module 3: Basic Court Positioning", content: "Understand where to stand during serves, returns, and rallies to cover the court effectively with your partner." }
+            ]
+        },
+        {
+            id: "level-3",
+            title: "Advanced, played a lot, need more strategy and improvement",
+            modules: [
+                { title: "Module 1: The Vibora", content: "Add the aggressive vibora (viper) shot to your arsenal to put pressure on your opponents." },
+                { title: "Module 2: Advanced Net Play", content: "Learn how to read your opponents, poach at the net, and finish points with decisive volleys." },
+                { title: "Module 3: Defensive Lobs and Dropshots", content: "Master the art of the defensive lob to reset the point, and use the dropshot to catch opponents off guard." }
+            ]
+        },
+        {
+            id: "level-4",
+            title: "Expert, playing league and looking to level up even further",
+            modules: [
+                { title: "Module 1: Tactical Game Planning", content: "Analyze opponent weaknesses and develop game plans before and during a match." },
+                { title: "Module 2: Counter-Attacking Strategies", content: "Learn how to turn defense into offense with powerful counter-punches and wall-assisted attacks." },
+                { title: "Module 3: The Mental Game", content: "Develop mental toughness, focus, and effective communication with your partner for high-pressure situations." }
+            ]
+        }
+    ];
+
+    const accordionContainer = document.getElementById('padel-course-accordion');
+    courseLevels.forEach(level => {
+        const item = document.createElement('div');
+        item.className = 'accordion-item bg-gray-800 border border-gray-700 rounded-lg';
+        
+        let modulesHtml = '';
+        level.modules.forEach(module => {
+            modulesHtml += `
+                <div class="collapsible-item border-t border-gray-700">
+                    <button class="collapsible-trigger w-full flex items-center justify-between text-left p-4 hover:bg-gray-700/50">
+                        <span class="font-semibold text-cyan-400">${module.title}</span>
+                        <svg class="chevron-icon w-5 h-5 text-gray-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="collapsible-content">
+                        <div class="p-4 text-gray-300 text-sm">
+                           <p>${module.content}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
         });
+        
+        let ctaButton = '';
+        if (level.id === 'level-1') {
+            ctaButton = `
+                <div class="p-4 border-t border-gray-700">
+                    <a href="levelup-beginner.html" class="block w-full text-center px-6 py-3 bg-cyan-500 text-white font-semibold rounded-md hover:bg-cyan-600 transition-colors">
+                        Start Your Beginner's Guide
+                    </a>
+                </div>
+            `;
+        }
 
-        // Navbar scroll effect
-        const navbar = document.querySelector('.nav-scroll');
+        item.innerHTML = `
+            <button class="accordion-trigger w-full flex items-center justify-between text-left p-4">
+                <span class="text-base font-medium text-white">${level.title}</span>
+                <svg class="chevron-icon w-6 h-6 text-gray-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="accordion-content">
+                ${modulesHtml}
+                ${ctaButton}
+            </div>
+        `;
+        accordionContainer.appendChild(item);
+    });
+    
+    accordionContainer.addEventListener('click', function(e) {
+        const accordionTrigger = e.target.closest('.accordion-trigger');
+        if (accordionTrigger) {
+            const item = accordionTrigger.parentElement;
+            const content = item.querySelector('.accordion-content');
+            const icon = accordionTrigger.querySelector('.chevron-icon');
+            const isOpen = item.classList.contains('open');
 
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                navbar.classList.add('scrolled');
+            // Close all other open items
+            document.querySelectorAll('.accordion-item.open').forEach(openItem => {
+                if (openItem !== item) {
+                    openItem.classList.remove('open');
+                    openItem.querySelector('.accordion-content').style.maxHeight = null;
+                    openItem.querySelector('.accordion-trigger .chevron-icon').classList.remove('rotate-180');
+                }
+            });
+
+            if (isOpen) {
+                item.classList.remove('open');
+                content.style.maxHeight = null;
+                icon.classList.remove('rotate-180');
             } else {
-                navbar.classList.remove('scrolled');  
-            }
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-        });
-
-        // Form submission handling
-        document.querySelectorAll('form').forEach(form => {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('🎯 Thank you for your interest! Our corporate team will contact you within 4 hours to discuss your custom program and schedule a free consultation.');
-            });
-        });
-
-        // Button click tracking
-        document.querySelectorAll('button').forEach(button => {
-            button.addEventListener('click', function() {
-                if (!this.type === 'submit') {
-                    console.log('Corporate Button clicked:', this.textContent);
-                }
-            });
-        });
-
-        // Enhanced scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0) scale(1)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe cards for animation
-        document.querySelectorAll('.card-hover').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px) scale(0.95)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
-        });
-
-        // Hero carousel functionality
-        const carouselImages = document.querySelectorAll('#hero-carousel .carousel-image');
-        let currentImageIndex = 0;
-
-        function showNextImage() {
-            if (carouselImages.length > 0) {
-                carouselImages[currentImageIndex].classList.remove('active');
-                currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
-                carouselImages[currentImageIndex].classList.add('active');
+                item.classList.add('open');
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.classList.add('rotate-180');
             }
         }
 
-        // Initialize carousel
-        if (carouselImages.length > 0) {
-            carouselImages[0].classList.add('active');
-            setInterval(showNextImage, 6000); // Slower for professional audience
+        const collapsibleTrigger = e.target.closest('.collapsible-trigger');
+        if(collapsibleTrigger) {
+            const item = collapsibleTrigger.parentElement;
+            const content = item.querySelector('.collapsible-content');
+            const icon = collapsibleTrigger.querySelector('.chevron-icon');
+            const isOpen = item.classList.contains('open');
+
+             if (isOpen) {
+                item.classList.remove('open');
+                content.style.maxHeight = null;
+                icon.classList.remove('rotate-180');
+            } else {
+                item.classList.add('open');
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.classList.add('rotate-180');
+            }
         }
+    });
 
-        // Interactive progress bars animation
-        const progressBars = document.querySelectorAll('[style*="width:"]');
-        const progressObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const bar = entry.target;
-                    const width = bar.style.width;
-                    bar.style.width = '0%';
-                    setTimeout(() => {
-                        bar.style.transition = 'width 2s ease-out';
-                        bar.style.width = width;
-                    }, 200);
-                }
-            });
-        });
-
-        progressBars.forEach(bar => {
-            progressObserver.observe(bar);
-        });
-
-        // Corporate badge click interaction
-        document.querySelectorAll('.corporate-badge').forEach(badge => {
-            badge.addEventListener('click', function() {
-                document.querySelector('#programs').scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            });
-        });
-
-        // Package selection tracking
-        document.querySelectorAll('[class*="package-"] button').forEach(button => {
-            button.addEventListener('click', function() {
-                const packageName = this.closest('[class*="card-hover"]').querySelector('h3').textContent;
-                console.log('Corporate package interest:', packageName);
-            });
-        });
-
-        // Add visual feedback for form interactions
-        document.querySelectorAll('input, select').forEach(input => {
-            input.addEventListener('focus', function() {
-                this.parentElement.style.transform = 'scale(1.02)';
-            });
-            
-            input.addEventListener('blur', function() {
-                this.parentElement.style.transform = 'scale(1)';
-            });
-        });
-
-        // Business emoji rotation control
-        document.querySelectorAll('.business-emoji').forEach(emoji => {
-            emoji.addEventListener('mouseenter', function() {
-                this.style.animationPlayState = 'paused';
-            });
-            
-            emoji.addEventListener('mouseleave', function() {
-                this.style.animationPlayState = 'running';
-            });
-        });
-    </script>
+    });
+  </script>
 </body>
 </html>

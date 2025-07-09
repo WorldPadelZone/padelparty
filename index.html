@@ -1,687 +1,466 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PadelParty Cape Town | Kids Parties, Adult Events & Corporate Team Building</title>
-    <meta name="description" content="Cape Town's premier padel party experience. Kids birthday parties, adult social events, and corporate team building in Camps Bay.">
-    <meta name="keywords" content="padel parties cape town, kids birthday parties, corporate team building, adult social events, camps bay">
+    
+    <!-- SEO Meta Tags -->
+    <title>Padel Party | Unforgettable Padel Events for Corporate & Social Groups</title>
+    <meta name="description" content="Padel Party organizes premium, all-inclusive padel events. We handle venue hire, coaching, catering, and more for your next team-building, client entertainment, or social club function.">
+    <meta name="keywords" content="padel events, corporate padel, team building padel, social padel party, padel party cape town, corporate events">
+    <meta name="author" content="Padel Party">
 
+    <!-- Open Graph Meta Tags (for social sharing) -->
+    <meta property="og:title" content="Padel Party | Unforgettable Padel Events">
+    <meta property="og:description" content="We plan, you play. All-inclusive padel events for corporate and social groups.">
+    <!-- NOTE: Update 'your-website-url.com' for this to work when sharing -->
+    <meta property="og:image" content="https://your-website-url.com/worldpadelzone/assets/images/1.jpg">
+    <meta property="og:url" content="https://your-website-url.com">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎾</text></svg>">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'padel-blue': '#1E88E5',
-                        'padel-orange': '#FF6B35',
-                        'padel-green': '#4CAF50',
-                        'padel-dark': '#2E2E2E'
-                    },
-                    fontFamily: {
-                        'poppins': ['Poppins', 'sans-serif'],
-                        'inter': ['Inter', 'sans-serif']
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 0.8s ease-in-out',
-                        'slide-up': 'slideUp 0.6s ease-out',
-                        'bounce-gentle': 'bounceGentle 2s infinite'
-                    }
-                }
-            }
-        }
-    </script>
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
         }
-
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .hero-video-overlay {
+            background-color: rgba(17, 24, 39, 0.6); /* gray-900 with 60% opacity */
         }
-
-        @keyframes bounceGentle {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-10px);
-            }
-            60% {
-                transform: translateY(-5px);
-            }
+        .section-title {
+            @apply text-3xl font-bold text-slate-800 sm:text-4xl;
         }
-
-        .gradient-bg {
-            background: linear-gradient(135deg, #1E88E5 0%, #FF6B35 100%);
+        .section-subtitle {
+            @apply mt-4 text-lg text-slate-600 max-w-2xl mx-auto;
         }
-
-        /* Remove the background image from hero-pattern as it will now be a carousel */
-        .hero-pattern {
-            position: relative; /* Needed for absolute positioning of carousel */
-            overflow: hidden; /* Hide overflowing images */
+        .cta-button {
+            @apply inline-block bg-gradient-to-r from-sky-500 to-emerald-500 text-white font-bold text-lg py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300;
         }
-
-        .card-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .nav-scroll {
-            transition: all 0.3s ease;
-        }
-
-        .nav-scroll.scrolled {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Carousel specific styles */
-        .carousel-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0; /* Ensure it's behind the content */
-        }
-
-        .carousel-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .fade-in {
             opacity: 0;
-            transition: opacity 1.5s ease-in-out; /* Smooth fade transition */
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
-
-        .carousel-image.active {
-            opacity: 0.45; /* Increased opacity for more vibrant images */
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
-
-        .hero-content-wrapper {
-            position: relative;
-            z-index: 1; /* Ensure content is above the carousel */
+        .dynamic-image {
+            transition: opacity 0.5s ease-in-out;
         }
     </style>
 </head>
+<body class="text-slate-700">
 
-<body class="font-inter text-padel-dark">
-    <nav class="nav-scroll fixed w-full top-0 z-50 bg-white/90 backdrop-blur-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center">
-                    <div class="bg-gradient-to-r from-padel-blue to-padel-orange text-white font-poppins font-bold text-xl px-3 py-1 rounded-lg">
-                        PadelParty
-                    </div>
-                </div>
-
-                <div class="hidden md:block">
-                    <div class="flex items-center space-x-8">
-                        <a href="https://worldpadelzone.github.io/padelparty/" class="text-padel-dark hover:text-padel-blue transition-colors font-medium">Home</a>
-                        <a href="https://worldpadelzone.github.io/padelparty/kids/" class="text-padel-dark hover:text-padel-blue transition-colors font-medium">Kids Parties</a>
-                        <a href="https://worldpadelzone.github.io/padelparty/adults/" class="text-padel-dark hover:text-padel-blue transition-colors font-medium">Adult Events</a>
-                        <a href="https://worldpadelzone.github.io/padelparty/corporate/" class="text-padel-dark hover:text-padel-blue transition-colors font-medium">Corporate</a>
-                        <a href="#about" class="text-padel-dark hover:text-padel-blue transition-colors font-medium">About</a>
-                        <button class="bg-padel-orange hover:bg-orange-600 text-white px-6 py-2 rounded-full font-semibold transition-colors">
-                            Get Quote
-                        </button>
-                    </div>
-                </div>
-
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-padel-dark hover:text-padel-blue focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="https://worldpadelzone.github.io/padelparty/" class="block px-3 py-2 text-padel-dark hover:text-padel-blue font-medium">Home</a>
-                <a href="https://worldpadelzone.github.io/padelparty/kids/" class="block px-3 py-2 text-padel-dark hover:text-padel-blue font-medium">Kids Parties</a>
-                <a href="https://worldpadelzone.github.io/padelparty/adults/" class="block px-3 py-2 text-padel-dark hover:text-padel-blue font-medium">Adult Events</a>
-                <a href="https://worldpadelzone.github.io/padelparty/corporate/" class="block px-3 py-2 text-padel-dark hover:text-padel-blue font-medium">Corporate</a>
-                <a href="#about" class="block px-3 py-2 text-padel-dark hover:text-padel-blue font-medium">About</a>
-                <button class="w-full text-left bg-padel-orange text-white px-3 py-2 rounded font-semibold">
-                    Get Quote
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-2">
+                    <!-- Placeholder SVG Logo - Replace with your own logo -->
+                    <svg class="h-8 w-8 text-white" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.715 11.232C19.235 10.282 18.065 9.172 16.735 8.282C15.405 7.392 14.125 6.792 12.895 6.482C12.825 6.472 12.745 6.462 12.675 6.452C12.505 6.412 12.255 6.382 11.915 6.382H11.725C10.745 6.382 9.81501 6.642 8.98501 7.162L14.305 12.482L15.715 11.072L19.715 11.232ZM8.41501 16.842C9.35501 17.352 10.465 17.622 11.725 17.622H11.915C12.255 17.622 12.505 17.592 12.675 17.552C12.745 17.542 12.825 17.532 12.895 17.522C14.125 17.212 15.405 16.612 16.735 15.722C18.065 14.832 19.235 13.722 19.715 12.772L15.715 12.932L8.41501 16.842ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z"/>
+                    </svg>
+                    <span class="text-2xl font-bold text-white">Padel Party</span>
+                </a>
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#services" class="text-white hover:text-sky-300 transition-colors duration-300">Services</a>
+                    <a href="#process" class="text-white hover:text-sky-300 transition-colors duration-300">How It Works</a>
+                    <a href="#gallery" class="text-white hover:text-sky-300 transition-colors duration-300">Gallery</a>
+                    <a href="#contact" class="text-white hover:text-sky-300 transition-colors duration-300">Contact</a>
+                </nav>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </div>
-    </nav>
-
-    <section id="home" class="gradient-bg hero-pattern min-h-screen flex items-center pt-16">
-        <div class="carousel-container" id="hero-carousel">
-            <img src="https://raw.githubusercontent.com/WorldPadelZone/worldpadelzone/main/assets/images/1.jpg" alt="Padel court view 1" class="carousel-image active">
-            <img src="https://raw.githubusercontent.com/WorldPadelZone/worldpadelzone/main/assets/images/2.jpg" alt="Padel court view 2" class="carousel-image">
-            <img src="https://raw.githubusercontent.com/WorldPadelZone/worldpadelzone/main/assets/images/3.jpg" alt="Padel court view 3" class="carousel-image">
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-800/90 backdrop-blur-sm">
+            <a href="#services" class="block text-white text-center py-3 px-6 hover:bg-slate-700 transition-colors duration-300">Services</a>
+            <a href="#process" class="block text-white text-center py-3 px-6 hover:bg-slate-700 transition-colors duration-300">How It Works</a>
+            <a href="#gallery" class="block text-white text-center py-3 px-6 hover:bg-slate-700 transition-colors duration-300">Gallery</a>
+            <a href="#contact" class="block text-white text-center py-3 px-6 hover:bg-slate-700 transition-colors duration-300">Contact</a>
         </div>
+    </header>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 hero-content-wrapper">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="text-white animate-fade-in">
-                    <h1 class="font-poppins font-bold text-4xl md:text-6xl lg:text-7xl leading-tight mb-6">
-                        Cape Town's Premier
-                        <span class="text-yellow-300">Padel Party</span>
-                        Experience
-                    </h1>
-                    <p class="text-xl md:text-2xl mb-8 text-blue-100 font-light">
-                        Unforgettable kids' birthdays, exciting adult social events, and dynamic corporate team building - all in beautiful Camps Bay.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <button class="bg-padel-orange hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105">
-                            Plan Your Party
-                        </button>
-                        <button class="border-2 border-white text-white hover:bg-white hover:text-padel-blue px-8 py-4 rounded-full font-semibold text-lg transition-all">
-                            Join Our Community
-                        </button>
-                    </div>
-
-                    <div class="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/20">
-                        <div class="text-center">
-                            <div class="font-poppins font-bold text-2xl md:text-3xl">100+</div>
-                            <div class="text-blue-200 text-sm">Happy Families</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="font-poppins font-bold text-2xl md:text-3xl">50+</div>
-                            <div class="text-blue-200 text-sm">Corporate Events</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="font-poppins font-bold text-2xl md:text-3xl">1000+</div>
-                            <div class="text-blue-200 text-sm">New Connections</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative animate-slide-up">
-                    <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
-                        <div class="bg-white rounded-2xl p-6 shadow-2xl">
-                            <div class="text-center mb-4">
-                                <img src="https://github.com/WorldPadelZone/padelparty/raw/main/assets/calendar.svg" alt="Get a Quote" class="w-12 h-12 mx-auto mb-3">
-                                <h3 class="font-poppins font-bold text-padel-dark text-xl">Get Your Quote</h3>
-                            </div>
-                            <form class="space-y-4">
-                                <div>
-                                    <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-padel-blue focus:border-transparent">
-                                        <option>Select Event Type</option>
-                                        <option>Kids Birthday Party</option>
-                                        <option>Adult Social Event</option>
-                                        <option>Corporate Team Building</option>
-                                    </select>
-                                </div>
-                                <div class="grid grid-cols-2 gap-3">
-                                    <input type="text" placeholder="Your Name" class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-padel-blue focus:border-transparent">
-                                    <input type="tel" placeholder="Phone" class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-padel-blue focus:border-transparent">
-                                </div>
-                                <input type="email" placeholder="Email Address" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-padel-blue focus:border-transparent">
-                                <input type="date" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-padel-blue focus:border-transparent">
-                                <button type="submit" class="w-full bg-padel-green hover:bg-green-600 text-white font-semibold py-3 rounded-lg transition-colors">
-                                    Get Quote
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-blue-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="font-poppins font-bold text-4xl md:text-5xl text-padel-dark mb-6">
-                    Perfect Events for Everyone
-                </h2>
-                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
-                    From kids' birthday celebrations to corporate team building, we create unforgettable padel experiences that bring people together.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-blue-200">
-                    <div class="bg-padel-orange/10 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                        <img src="https://github.com/WorldPadelZone/padelparty/raw/main/assets/hat.svg" alt="Kids Party Icon" class="w-8 h-8">
-                    </div>
-                    <h3 class="font-poppins font-bold text-2xl text-padel-dark mb-4">Kids Parties</h3>
-                    <p class="text-gray-600 mb-6">
-                        Safe, fun, and unforgettable birthday experiences for ages 6-18. Professional coaches, equipment provided, and memories that last a lifetime.
-                    </p>
-                    <ul class="text-sm text-gray-600 mb-6 space-y-2">
-                        <li class="flex items-center"><span class="text-padel-green mr-2">✓</span> All equipment included</li>
-                        <li class="flex items-center"><span class="text-padel-green mr-2">✓</span> Qualified instructors</li>
-                        <li class="flex items-center"><span class="text-padel-green mr-2">✓</span> Safety protocols</li>
-                        <li class="flex items-center"><span class="text-padel-green mr-2">✓</span> Photo packages</li>
-                    </ul>
-                    <div class="text-padel-dark font-bold text-lg mb-4">From R2,500</div>
-                    <button class="w-full bg-padel-orange hover:bg-orange-600 text-white font-semibold py-3 rounded-lg transition-colors">
-                        Plan Kids Party
-                    </button>
-                </div>
-
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-blue-200">
-                    <div class="bg-padel-blue/10 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                        <img src="https://github.com/WorldPadelZone/padelparty/raw/main/assets/cup.svg" alt="Adult Event Icon" class="w-8 h-8">
-                    </div>
-                    <h3 class="font-poppins font-bold text-2xl text-padel-dark mb-4">Adult Events</h3>
-                    <p class="text-gray-600 mb-6">
-                        Meet new people, learn new skills, and have amazing fun. Singles mixers, couples tournaments, and social leagues in Cape Town's most beautiful locations.
-                    </p>
-                    <ul class="text-sm text-gray-600 mb-6 space-y-2">
-                        <li class="flex items-center"><span class="text-padel-green mr-2">✓</span> Social mixers</li>
-                        <li class="flex items-center"><span class="text-padel-green mr-2">✓</span> Skill development</li>
-                        <li class="flex items-center"><span class="text-padel-green mr-2">✓</span> Networking opportunities</li>
-                        <li class="flex items-center"><span class="text-padel-green mr-2">✓</span> WhatsApp community</li>
-                    </ul>
-                    <div class="text-padel-dark font-bold text-lg mb-4">From R250 per person</div>
-                    <button class="w-full bg-padel-blue hover:bg-blue-600 text-white font-semibold py-3 rounded-lg transition-colors">
-                        Join Next Event
-                    </button>
-                </div>
-
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-blue-200">
-                    <div class="bg-padel-green/10 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                        <img src="https://github.com/WorldPadelZone/padelparty/raw/main/assets/team.svg" alt="Corporate Event Icon" class="w-8 h-8">
-                    </div>
-                    <h3 class="font-poppins font-bold text-2xl text-padel-dark mb-4">Corporate Events</h3>
-                    <p class="text-gray-600 mb-6">
-                        Team building that actually builds teams. Boost morale, increase productivity, and strengthen relationships through engaging padel experiences.
-                    </p>
-                    <ul class="text-sm text-gray-600 mb-6 space-y-2">
-                        <li class="flex items-center"><span class="text-padel-green mr-2">✓</span> Custom packages</li>
-                        <li class="flex items-center"><span class="text-padel-green mr-2">✓</span> Professional facilitation</li>
-                        <li class="flex items-center"><span class="text-padel-green mr-2">✓</span> Catering options</li>
-                        <li class="flex items-center"><span class="text-padel-green mr-2">✓</span> ROI reporting</li>
-                    </ul>
-                    <div class="text-padel-dark font-bold text-lg mb-4">From R15,000</div>
-                    <button class="w-full bg-padel-green hover:bg-green-600 text-white font-semibold py-3 rounded-lg transition-colors">
-                        Request Proposal
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-blue-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="font-poppins font-bold text-4xl md:text-5xl text-padel-dark mb-6">
-                        Why Choose PadelParty?
-                    </h2>
-                    <p class="text-xl text-gray-700 mb-8">
-                        We're Cape Town's first specialized padel event company, combining the excitement of South Africa's fastest-growing sport with world-class event planning.
-                    </p>
-
-                    <div class="space-y-6">
-                        <div class="flex items-start space-x-4">
-                            <div class="bg-padel-blue text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                                <span class="font-bold">1</span>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-lg text-padel-dark mb-2">Premium Camps Bay Locations</h4>
-                                <p class="text-gray-700">Stunning venues with Table Mountain views and world-class facilities.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-4">
-                            <div class="bg-padel-orange text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                                <span class="font-bold">2</span>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-lg text-padel-dark mb-2">Expert Coaching & Safety</h4>
-                                <p class="text-gray-700">Qualified instructors with comprehensive safety protocols for all ages.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-4">
-                            <div class="bg-padel-green text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                                <span class="font-bold">3</span>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-lg text-padel-dark mb-2">Complete Event Management</h4>
-                                <p class="text-gray-700">From planning to execution, we handle every detail so you can focus on having fun.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative">
-                    <div class="bg-gradient-to-br from-padel-blue to-padel-green rounded-3xl p-8 text-white">
-                        <h3 class="font-poppins font-bold text-2xl mb-6">Camps Bay Advantage</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-center space-x-3">
-                                <img src="https://github.com/WorldPadelZone/padelparty/raw/main/assets/table.svg" alt="Table Mountain" class="w-6 h-6">
-                                <span>Iconic Table Mountain backdrop</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <img src="https://github.com/WorldPadelZone/padelparty/raw/main/assets/watch.svg" alt="Beaches" class="w-6 h-6">
-                                <span>Minutes from beautiful beaches</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <img src="https://github.com/WorldPadelZone/padelparty/raw/main/assets/map.svg" alt="Padel Facilities" class="w-6 h-6">
-                                <span>World-class padel facilities</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <img src="https://github.com/WorldPadelZone/padelparty/raw/main/assets/car.svg" alt="Parking" class="w-6 h-6">
-                                <span>Easy access and parking</span>
-                            </div>
-                        </div>
-
-                        <div class="mt-8 p-4 bg-white/10 rounded-xl backdrop-blur-sm">
-                            <div class="text-center">
-                                <div class="font-poppins font-bold text-3xl">864</div>
-                                <div class="text-sm text-blue-100">Padel courts across South Africa</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-blue-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="font-poppins font-bold text-4xl md:text-5xl text-padel-dark mb-6">
-                    What Our Community Says
-                </h2>
-                <p class="text-xl text-gray-700">
-                    Real experiences from real people who've joined the PadelParty community.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-2xl p-8 shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-padel-orange text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                            </svg>
-                        </div>
-                        <div class="ml-4">
-                            <div class="font-semibold">Sarah M.</div>
-                            <div class="text-sm text-gray-500">Mom of 2, Camps Bay</div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-4">
-                        "My daughter's 10th birthday was absolutely incredible! The kids had so much fun learning padel, and the instructors were amazing with them. Highly recommended!"
-                    </p>
-                    <div class="flex text-yellow-400">
-                        ⭐⭐⭐⭐⭐
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl p-8 shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-padel-blue text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                            </svg>
-                        </div>
-                        <div class="ml-4">
-                            <div class="font-semibold">Mike T.</div>
-                            <div class="text-sm text-gray-500">Marketing Director</div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-4">
-                        "Best team building event we've ever done. The whole team is still talking about it weeks later. Padel is such a great way to connect with colleagues!"
-                    </p>
-                    <div class="flex text-yellow-400">
-                        ⭐⭐⭐⭐⭐
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl p-8 shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-padel-green text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                            </svg>
-                        </div>
-                        <div class="ml-4">
-                            <div class="font-semibold">Lisa K.</div>
-                            <div class="text-sm text-gray-500">Social Event Regular</div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-4">
-                        "I've met so many amazing people through PadelParty events. The social mixers are fun, friendly, and a great way to stay active while making new friends!"
-                    </p>
-                    <div class="flex text-yellow-400">
-                        ⭐⭐⭐⭐⭐
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="gradient-bg hero-pattern py-20">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="font-poppins font-bold text-4xl md:text-5xl text-white mb-6">
-                Ready to Start Your Padel Adventure?
-            </h2>
-            <p class="text-xl text-blue-100 mb-8">
-                Join Cape Town's fastest-growing sports community and create unforgettable memories.
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
+        <!-- Video Background -->
+        <video autoplay loop muted playsinline class="absolute z-0 w-auto min-w-full min-h-full max-w-none">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-two-men-playing-a-game-of-paddel-4322-large.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-video-overlay absolute top-0 left-0 right-0 bottom-0"></div>
+        
+        <div class="relative z-10 px-6">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4 fade-in">
+                The Ultimate Padel Experience for Your Team or Social Club
+            </h1>
+            <p class="text-lg md:text-2xl font-light max-w-3xl mx-auto mb-8 fade-in" style="transition-delay: 200ms;">
+                We plan, you play. All-inclusive padel events designed to be unforgettable.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button class="bg-padel-orange hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105">
-                    Get Your Quote
-                </button>
-                <button class="border-2 border-white text-white hover:bg-white hover:text-padel-blue px-8 py-4 rounded-full font-semibold text-lg transition-all">
-                    Call Us: 021-123-4567
-                </button>
-            </div>
+            <a href="#contact" class="cta-button fade-in" style="transition-delay: 400ms;">Plan Your Event</a>
         </div>
     </section>
 
-    <footer class="bg-padel-dark text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <div class="bg-gradient-to-r from-padel-blue to-padel-orange text-white font-poppins font-bold text-xl px-3 py-1 rounded-lg mb-4 inline-block">
-                        PadelParty
+    <main>
+        <!-- What We Offer Section -->
+        <section id="services" class="py-20 lg:py-32 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title fade-in">All-Inclusive Padel Events</h2>
+                <p class="section-subtitle fade-in">We handle every detail, so you can focus on the fun. Our standard package is packed with value.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mt-12">
+                    <!-- Service Item 1 -->
+                    <div class="bg-slate-50 p-8 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 fade-in">
+                        <div class="bg-sky-100 text-sky-600 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Exclusive Venue Hire</h3>
+                        <p class="text-slate-600">Enjoy a minimum of 3 hours of private court time for your group at top-tier padel clubs.</p>
                     </div>
-                    <p class="text-gray-300 mb-4">
-                        Cape Town's premier padel party experience, creating unforgettable events in beautiful Camps Bay.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12.036 6.011c-3.3 0-5.97 2.67-5.97 5.97s2.67 5.97 5.97 5.97 5.97-2.67 5.97-5.97-2.67-5.97-5.97-5.97zm0 9.854c-2.14 0-3.884-1.744-3.884-3.884s1.744-3.884 3.884-3.884 3.884 1.744 3.884 3.884-1.744 3.884-3.884 3.884zm7.604-10.079c0 .772-.628 1.4-1.4 1.4s-1.4-.628-1.4-1.4.628-1.4 1.4-1.4 1.4.628 1.4 1.4zm3.979 1.421c-.089-1.88-.519-3.547-1.895-4.923s-3.043-1.806-4.923-1.895c-1.941-.11-7.76-.11-9.701 0-1.88.089-3.547.519-4.923 1.895s-1.806 3.043-1.895 4.923c-.11 1.941-.11 7.76 0 9.701.089 1.88.519 3.547 1.895 4.923s3.043 1.806 4.923 1.895c1.941.11 7.76.11 9.701 0 1.88-.089 3.547-.519 4.923-1.895s1.806-3.043 1.895-4.923c.11-1.941.11-7.76 0-9.701zm-2.49 11.792c-.403 1.011-1.182 1.79-2.193 2.193-1.518.602-5.117.463-6.793.463s-5.275.139-6.793-.463c-1.011-.403-1.79-1.182-2.193-2.193-.602-1.518-.463-5.117-.463-6.793s-.139-5.275.463-6.793c.403-1.011 1.182-1.79 2.193-2.193 1.518-.602 5.117-.463 6.793-.463s5.275-.139 6.793.463c1.011.403 1.79 1.182 2.193 2.193.602 1.518.463 5.117.463 6.793s.139 5.275-.463 6.793z"/>
-                            </svg>
-                        </a>
+                    <!-- Service Item 2 -->
+                    <div class="bg-slate-50 p-8 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 fade-in" style="transition-delay: 100ms;">
+                        <div class="bg-emerald-100 text-emerald-600 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Pro Coaching Session</h3>
+                        <p class="text-slate-600">Our coaches get the party started with a fun, interactive session for beginners and first-timers.</p>
                     </div>
-                </div>
-
-                <div>
-                    <h4 class="font-semibold text-lg mb-4">Services</h4>
-                    <ul class="space-y-2 text-gray-300">
-                    <li><a href="https://worldpadelzone.github.io/padelparty/kids/" class="hover:text-white transition-colors">Kids Birthday Parties</a></li>
-                    <li><a href="https://worldpadelzone.github.io/padelparty/adults/" class="hover:text-white transition-colors">Adult Social Events</a></li>
-                    <li><a href="https://worldpadelzone.github.io/padelparty/corporate/" class="hover:text-white transition-colors">Corporate Team Building</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Private Coaching</a></li>
-                </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-semibold text-lg mb-4 flex items-center">
-                        <svg class="w-5 h-5 mr-2 text-padel-orange" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </svg>
-                        Contact
-                    </h4>
-                    <ul class="space-y-2 text-gray-300">
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                            </svg>
-                            Camps Bay, Cape Town
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                            </svg>
-                            021-123-4567
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
-                            hello@padelparty.co.za
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
-                                <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
-                            </svg>
-                            Mon-Sun: 8AM-8PM
-                        </li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-semibold text-lg mb-4">Newsletter</h4>
-                    <p class="text-gray-300 mb-4">Get updates on events and special offers.</p>
-                    <div class="flex">
-                        <input type="email" placeholder="Your email" class="flex-1 px-4 py-2 rounded-l-lg text-gray-900">
-                        <button class="bg-padel-orange hover:bg-orange-600 px-4 py-2 rounded-r-lg transition-colors">
-                            Subscribe
-                        </button>
+                    <!-- Service Item 3 -->
+                    <div class="bg-slate-50 p-8 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 fade-in" style="transition-delay: 200ms;">
+                        <div class="bg-sky-100 text-sky-600 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Game Management</h3>
+                        <p class="text-slate-600">We organize friendly matches and tournaments, managing the scoring for end-of-event awards.</p>
+                    </div>
+                    <!-- Service Item 4 -->
+                    <div class="bg-slate-50 p-8 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 fade-in" style="transition-delay: 300ms;">
+                        <div class="bg-emerald-100 text-emerald-600 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0c-.454-.303-.977-.454-1.5-.454V5.454c.523 0 1.046-.151 1.5-.454a2.704 2.704 0 013 0 2.704 2.704 0 003 0 2.704 2.704 0 013 0 2.704 2.704 0 003 0c.454.303.977.454 1.5.454v10.092zM5 19.5v-10c0-1.105.895-2 2-2h10c1.105 0 2 .895 2 2v10c0 1.105-.895 2-2 2H7c-1.105 0-2-.895-2-2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Catering & Drinks</h3>
+                        <p class="text-slate-600">From welcome drinks and snacks to full meals, we provide delicious options to keep your team fueled.</p>
+                    </div>
+                    <!-- Service Item 5 -->
+                    <div class="bg-slate-50 p-8 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 fade-in" style="transition-delay: 400ms;">
+                        <div class="bg-sky-100 text-sky-600 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Event Photos</h3>
+                        <p class="text-slate-600">Our photographer captures all the action, providing you with high-quality images after the event.</p>
+                    </div>
+                    <!-- Service Item 6 -->
+                    <div class="bg-slate-50 p-8 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 fade-in" style="transition-delay: 500ms;">
+                        <div class="bg-emerald-100 text-emerald-600 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Digital Screens</h3>
+                        <p class="text-slate-600">Add a premium touch with on-site digital screens displaying event photos and videos in real-time.</p>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 PadelParty. All rights reserved. | Privacy Policy | Terms of Service</p>
+        <!-- How It Works Section -->
+        <section id="process" class="py-20 lg:py-32 bg-slate-100">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title fade-in">It's as Easy as 1, 2, 3</h2>
+                <p class="section-subtitle fade-in">We've streamlined our process to be completely hassle-free.</p>
+                <div class="relative mt-16">
+                    <!-- Dashed line for desktop -->
+                    <div class="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-slate-300 border-dashed border-slate-400 -translate-y-1/2"></div>
+                    <div class="relative grid grid-cols-1 md:grid-cols-3 gap-12">
+                        <!-- Step 1 -->
+                        <div class="fade-in">
+                            <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-sky-500">
+                                <div class="text-5xl font-extrabold text-sky-500/30 mb-4">01</div>
+                                <h3 class="text-xl font-bold text-slate-800 mb-2">Tell Us Your Vision</h3>
+                                <p class="text-slate-600">Fill out our simple enquiry form with your group's details and what you're looking for.</p>
+                            </div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="fade-in" style="transition-delay: 200ms;">
+                             <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-emerald-500">
+                                <div class="text-5xl font-extrabold text-emerald-500/30 mb-4">02</div>
+                                <h3 class="text-xl font-bold text-slate-800 mb-2">Customize Your Party</h3>
+                                <p class="text-slate-600">We'll contact you to discuss the details and tailor the perfect, all-inclusive package.</p>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="fade-in" style="transition-delay: 400ms;">
+                             <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-sky-500">
+                                <div class="text-5xl font-extrabold text-sky-500/30 mb-4">03</div>
+                                <h3 class="text-xl font-bold text-slate-800 mb-2">Show Up & Play</h3>
+                                <p class="text-slate-600">We handle everything on the day. You and your guests just focus on having a great time!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
+        
+        <!-- Perfect For Section -->
+        <section id="occasions" class="py-20 lg:py-32 bg-white">
+            <div class="container mx-auto px-6">
+                 <div class="text-center">
+                    <h2 class="section-title fade-in">Perfect For Any Occasion</h2>
+                    <p class="section-subtitle fade-in">Bring people together for a memorable experience they'll talk about for years.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                    <!-- Occasion Card -->
+                    <div class="relative rounded-xl overflow-hidden shadow-lg group fade-in">
+                        <img src="worldpadelzone/assets/images/1.jpg" alt="Corporate team building event" class="dynamic-image w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x400/f8fafc/94a3b8?text=Image+Not+Found';">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-6">
+                            <h3 class="text-2xl font-bold text-white">Corporate Team Building</h3>
+                        </div>
+                    </div>
+                    <!-- Occasion Card -->
+                    <div class="relative rounded-xl overflow-hidden shadow-lg group fade-in" style="transition-delay: 150ms;">
+                        <img src="worldpadelzone/assets/images/2.jpg" alt="Client entertainment event" class="dynamic-image w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x400/f8fafc/94a3b8?text=Image+Not+Found';">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-6">
+                            <h3 class="text-2xl font-bold text-white">Client Entertainment</h3>
+                        </div>
+                    </div>
+                     <!-- Occasion Card -->
+                    <div class="relative rounded-xl overflow-hidden shadow-lg group fade-in" style="transition-delay: 300ms;">
+                        <img src="worldpadelzone/assets/images/3.jpg" alt="Year-end function" class="dynamic-image w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x400/f8fafc/94a3b8?text=Image+Not+Found';">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-6">
+                            <h3 class="text-2xl font-bold text-white">Year-End Functions</h3>
+                        </div>
+                    </div>
+                     <!-- Occasion Card -->
+                    <div class="relative rounded-xl overflow-hidden shadow-lg group fade-in" style="transition-delay: 450ms;">
+                        <img src="worldpadelzone/assets/images/4.jpg" alt="Social club outing" class="dynamic-image w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x400/f8fafc/94a3b8?text=Image+Not+Found';">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-6">
+                            <h3 class="text-2xl font-bold text-white">Social Club Outings</h3>
+                        </div>
+                    </div>
+                     <!-- Occasion Card -->
+                    <div class="relative rounded-xl overflow-hidden shadow-lg group fade-in" style="transition-delay: 600ms;">
+                        <img src="worldpadelzone/assets/images/5.jpg" alt="Milestone birthday party" class="dynamic-image w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x400/f8fafc/94a3b8?text=Image+Not+Found';">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-6">
+                            <h3 class="text-2xl font-bold text-white">Milestone Birthdays</h3>
+                        </div>
+                    </div>
+                     <!-- Occasion Card -->
+                    <div class="relative rounded-xl overflow-hidden shadow-lg group fade-in" style="transition-delay: 750ms;">
+                        <img src="worldpadelzone/assets/images/6.jpg" alt="Special celebration" class="dynamic-image w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x400/f8fafc/94a3b8?text=Image+Not+Found';">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-6">
+                            <h3 class="text-2xl font-bold text-white">Any Celebration!</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-20 lg:py-32 bg-slate-100">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title fade-in">See The Party In Action</h2>
+                <p class="section-subtitle fade-in">This is where the magic happens. High-fives, friendly competition, and a lot of laughs.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12">
+                    <div class="fade-in">
+                        <img src="worldpadelzone/assets/images/7.jpg" alt="Group of people playing padel and laughing" class="dynamic-image rounded-lg shadow-md w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/800x600/f8fafc/94a3b8?text=Image+Not+Found';">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="fade-in" style="transition-delay: 200ms;">
+                             <img src="worldpadelzone/assets/images/8.jpg" alt="People socializing with drinks after a game" class="dynamic-image rounded-lg shadow-md w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/f8fafc/94a3b8?text=Image+Not+Found';">
+                        </div>
+                        <div class="fade-in" style="transition-delay: 300ms;">
+                             <img src="worldpadelzone/assets/images/9.jpg" alt="Coach explaining rules to a group of beginners" class="dynamic-image rounded-lg shadow-md w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/f8fafc/94a3b8?text=Image+Not+Found';">
+                        </div>
+                        <div class="col-span-2 fade-in" style="transition-delay: 400ms;">
+                             <img src="worldpadelzone/assets/images/10.jpg" alt="Happy group photo of all event attendees" class="dynamic-image rounded-lg shadow-md w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/800x300/f8fafc/94a3b8?text=Image+Not+Found';">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 lg:py-32 bg-slate-800 text-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold sm:text-4xl fade-in">Let's Plan Your Padel Party!</h2>
+                    <p class="mt-4 text-lg text-slate-300 max-w-2xl mx-auto fade-in">Ready to book an unforgettable event? Fill out the form below or email us directly. We'll get back to you within 24 hours.</p>
+                </div>
+                <div class="max-w-3xl mx-auto mt-12 bg-white text-slate-800 rounded-xl shadow-2xl p-8 lg:p-12 fade-in">
+                    <form id="contact-form">
+                        <div id="form-success-message" class="hidden mb-6 p-4 bg-emerald-100 text-emerald-800 border border-emerald-300 rounded-lg">
+                            Thank you for your enquiry! We've received your message and will be in touch shortly.
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="font-semibold">Full Name</label>
+                                <input type="text" id="name" name="name" required class="w-full mt-2 p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition">
+                            </div>
+                            <div>
+                                <label for="company" class="font-semibold">Company / Club Name</label>
+                                <input type="text" id="company" name="company" class="w-full mt-2 p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition">
+                            </div>
+                            <div>
+                                <label for="email" class="font-semibold">Email Address</label>
+                                <input type="email" id="email" name="email" required class="w-full mt-2 p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition">
+                            </div>
+                             <div>
+                                <label for="phone" class="font-semibold">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="w-full mt-2 p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition">
+                            </div>
+                            <div>
+                                <label for="guests" class="font-semibold">Estimated Guests</label>
+                                <input type="number" id="guests" name="guests" min="4" class="w-full mt-2 p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition">
+                            </div>
+                            <div>
+                                <label for="date" class="font-semibold">Preferred Date (Optional)</label>
+                                <input type="date" id="date" name="date" class="w-full mt-2 p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition">
+                            </div>
+                            <div class="md:col-span-2">
+                                <label for="message" class="font-semibold">Message / Questions</label>
+                                <textarea id="message" name="message" rows="5" required class="w-full mt-2 p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition"></textarea>
+                            </div>
+                        </div>
+                        <div class="text-center mt-8">
+                            <button type="submit" class="cta-button">Send Enquiry</button>
+                        </div>
+                    </form>
+                    <div class="text-center mt-8">
+                        <p class="text-slate-600">Or email us directly at <a href="mailto:hello@padelparty.co.za" class="font-semibold text-sky-600 hover:underline">hello@padelparty.co.za</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <a href="#" class="flex items-center justify-center space-x-2 mb-4">
+                <svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.715 11.232C19.235 10.282 18.065 9.172 16.735 8.282C15.405 7.392 14.125 6.792 12.895 6.482C12.825 6.472 12.745 6.462 12.675 6.452C12.505 6.412 12.255 6.382 11.915 6.382H11.725C10.745 6.382 9.81501 6.642 8.98501 7.162L14.305 12.482L15.715 11.072L19.715 11.232ZM8.41501 16.842C9.35501 17.352 10.465 17.622 11.725 17.622H11.915C12.255 17.622 12.505 17.592 12.675 17.552C12.745 17.542 12.825 17.532 12.895 17.522C14.125 17.212 15.405 16.612 16.735 15.722C18.065 14.832 19.235 13.722 19.715 12.772L15.715 12.932L8.41501 16.842ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z"/>
+                </svg>
+                <span class="text-xl font-bold text-white">Padel Party</span>
+            </a>
+            <p class="mb-4"><a href="mailto:hello@padelparty.co.za" class="hover:text-white transition-colors duration-300">hello@padelparty.co.za</a></p>
+            <!-- Add social media links here if available -->
+            <p class="text-sm">&copy; <span id="current-year"></span> Padel Party. All Rights Reserved.</p>
         </div>
     </footer>
 
+
     <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Mobile Menu Toggle ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
 
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Navbar scroll effect
-        const navbar = document.querySelector('.nav-scroll');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-
-                    // Close mobile menu after clicking
+            // --- Close mobile menu on link click ---
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
                     mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // --- Header background on scroll ---
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('bg-slate-800/90', 'shadow-lg', 'backdrop-blur-sm');
+                } else {
+                    header.classList.remove('bg-slate-800/90', 'shadow-lg', 'backdrop-blur-sm');
                 }
             });
-        });
 
-        // Form submission simulation
-        document.querySelectorAll('form').forEach(form => {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('Thank you for your interest! We\'ll contact you within 24 hours to discuss your padel party needs.');
+            // --- Animate elements on scroll ---
+            const faders = document.querySelectorAll('.fade-in');
+            const appearOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+            const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add('visible');
+                        appearOnScroll.unobserve(entry.target);
+                    }
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
             });
-        });
+            
+            // --- Set current year in footer ---
+            document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        // Button click tracking simulation
-        document.querySelectorAll('button').forEach(button => {
-            button.addEventListener('click', function() {
-                if (!this.type === 'submit') {
-                    console.log('Button clicked:', this.textContent);
-                    // This would integrate with Google Analytics in production
-                }
+            // --- Contact Form Submission ---
+            const contactForm = document.getElementById('contact-form');
+            const successMessage = document.getElementById('form-success-message');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault(); // Prevent actual form submission
+                
+                // Here you would typically send the form data to a server or email service.
+                // For this static example, we'll just show a success message.
+                
+                const formElements = contactForm.querySelectorAll('div:not(:first-child)');
+                formElements.forEach(el => el.style.display = 'none');
+                successMessage.classList.remove('hidden');
+                
+                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
             });
+
+            // --- Dynamic Image Refresh ---
+            const imageBasePath = 'worldpadelzone/assets/images/';
+            const totalImages = 60;
+
+            function updateDynamicImages() {
+                const dynamicImages = document.querySelectorAll('.dynamic-image');
+                dynamicImages.forEach(img => {
+                    // Get a new random number
+                    const randomImageNumber = Math.floor(Math.random() * totalImages) + 1;
+                    const newSrc = `${imageBasePath}${randomImageNumber}.jpg`;
+                    
+                    // To avoid a flash of a broken image, we can preload the new image
+                    const tempImg = new Image();
+                    tempImg.src = newSrc;
+                    tempImg.onload = () => {
+                        // Fade out the old image, change src, then fade in
+                        img.style.opacity = '0';
+                        setTimeout(() => {
+                           img.src = newSrc;
+                           img.style.opacity = '1';
+                        }, 250); // half of the transition duration
+                    };
+                    tempImg.onerror = () => {
+                        // If the new image fails to load, do nothing and keep the old one.
+                        // This prevents showing a broken image icon during refresh.
+                    };
+                });
+            }
+
+            // Set interval to refresh images every 3 seconds
+            setInterval(updateDynamicImages, 3000);
         });
-
-        // Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements for animation
-        document.querySelectorAll('.card-hover').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
-        });
-
-        // Carousel functionality
-        const carouselImages = document.querySelectorAll('#hero-carousel .carousel-image');
-        let currentImageIndex = 0;
-
-        function showNextImage() {
-            carouselImages[currentImageIndex].classList.remove('active');
-            currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
-            carouselImages[currentImageIndex].classList.add('active');
-        }
-
-        // Initialize the carousel with the first image
-        if (carouselImages.length > 0) {
-            carouselImages[0].classList.add('active');
-            setInterval(showNextImage, 5000); // Change image every 5 seconds
-        }
     </script>
 </body>
 </html>
