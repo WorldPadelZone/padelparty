@@ -55,11 +55,17 @@
             opacity: 1;
             transform: translateY(0);
         }
-        .dynamic-image, .hero-carousel-image {
+        .dynamic-image {
             transition: opacity 0.5s ease-in-out;
         }
         .hero-carousel-image {
-            @apply absolute top-0 left-0 w-full h-full object-cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* This makes the image cover the container */
+            transition: opacity 1s ease-in-out;
         }
     </style>
 </head>
@@ -102,9 +108,13 @@
     <section class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
         <!-- Image Carousel Background -->
         <div id="hero-carousel" class="absolute top-0 left-0 w-full h-full z-0">
+            <!-- NOTE: The following image URLs for the carousel are fixed. -->
+            <!-- The 2nd and 3rd images are placeholders. Please replace them with your actual hero images once they are uploaded correctly to your server. -->
             <img src="https://worldpadelzone.com/assets/images/worldpadelzonehero.jpg" alt="Vibrant padel party scene" class="hero-carousel-image" style="opacity: 1;">
-            <img src="https://worldpadelzone.com/assets/images/worldpadelzonehero01.jpg" alt="People enjoying a padel event" class="hero-carousel-image" style="opacity: 0;">
-            <img src="https://worldpadelzone.com/assets/images/worldpadelzonehero02.jpg" alt="Action shot from a padel match" class="hero-carousel-image" style="opacity: 0;">
+            <!-- Placeholder image 2: Replace this src with your correct URL -->
+            <img src="https://worldpadelzone.com/assets/images/15.jpg" alt="People enjoying a padel event" class="hero-carousel-image" style="opacity: 0;">
+            <!-- Placeholder image 3: Replace this src with your correct URL -->
+            <img src="https://worldpadelzone.com/assets/images/25.jpg" alt="Action shot from a padel match" class="hero-carousel-image" style="opacity: 0;">
         </div>
         <div class="hero-overlay absolute top-0 left-0 right-0 bottom-0 z-10"></div>
         
